@@ -36,7 +36,6 @@ authRoutes.post('/signup', (req, res, next) => {
       const aNewUser = new User({ // ce qu'il y aura dans ma base de données
         username:username,
         email:email,
-        imageUrl:imageUrl,
         passwordHash: hashPass
       });
     
