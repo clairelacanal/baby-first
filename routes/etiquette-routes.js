@@ -7,7 +7,7 @@ const uploader = require('../configs/cloudinary-setup.config');
 const Etiquette = require ('../models/etiquette-model')
 
 /* POST pour créer une nouvelle étiquette */
-etiquetteRoutes.post('/', (req, res, next) => {
+etiquetteRoutes.post('/etiquette', (req, res, next) => {
 
     console.log('currentUser', req.session.currentUser)
 
@@ -40,7 +40,7 @@ etiquetteRoutes.post('/', (req, res, next) => {
 
 /*GET afficher toutes les étiquettes */
 
-etiquetteRoutes.get('/', (req,res,next) => {
+etiquetteRoutes.get('/etiquette', (req,res,next) => {
   Etiquette.find()
     .populate('author')
     .then(allTheEtiquettes => {
@@ -53,7 +53,7 @@ etiquetteRoutes.get('/', (req,res,next) => {
 
 /* GET /etiquette/:id afficher le detail d'une etiquette */
 
-etiquetteRoutes.get('/:id', (req,res,next) => {
+etiquetteRoutes.get('/etiquette/:id', (req,res,next) => {
 
   if (!req.session.currentUser) {
     res.status(401).json({
@@ -82,7 +82,7 @@ etiquetteRoutes.get('/:id', (req,res,next) => {
 
 /*PUT /etiquette/:id modifier une étiquette */
 
-etiquetteRoutes.put('/:id', (req,res,next) => {
+etiquetteRoutes.put('/etiquette/:id', (req,res,next) => {
 
   if (!req.session.currentUser) {
     res.status(401).json({
@@ -109,7 +109,7 @@ etiquetteRoutes.put('/:id', (req,res,next) => {
 })
 
 /*DELETE /etiquette/:id delete une annonce */
-etiquetteRoutes.delete('/:id', (req, res, next)=>{
+etiquetteRoutes.delete('/etiquette/:id', (req, res, next)=>{
 
   if(!mongoose.Types.ObjectId.isValid(req.params.id)) {
     res.status(400).json({ message: "L'identifiant spécifié n'est pas valide"});

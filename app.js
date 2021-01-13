@@ -70,7 +70,7 @@ const authRoutes = require('./routes/auth-routes');
 app.use('/auth', authRoutes);
 
 const etiquetteRoutes = require('./routes/etiquette-routes');
-app.use('/etiquette', etiquetteRoutes);
+app.use('/profile', etiquetteRoutes);
 
 const fileUploadRoutes = require ('./routes/file-upload-routes');
 app.use('/', fileUploadRoutes)
