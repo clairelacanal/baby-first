@@ -131,7 +131,8 @@ authRoutes.put('/profile/:id', (req,res,next) => {
     return;
   }
 
-  const id = req.params.id;
+})
+
 
 
 module.exports = authRoutes;
