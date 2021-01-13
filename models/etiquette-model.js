@@ -5,8 +5,8 @@ const etiquetteSchema = new Schema({
   title: String,
   lieu: String,
   date: {
-      type: Date,
-      default: Date.now
+    type: Date,
+    default: Date.now
   },
   imageUrl: {
     type: String,
