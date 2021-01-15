@@ -5,10 +5,16 @@ import {logout} from '../Auth/auth-service';
 import './Navbar.css';
 
 
-class Navbar extends React.Component {
-    render(){
-        return()
-    }
+const Navbar = (props) => {
+        return(
+            <div id="navbar">
+                <div className="section-navbar">
+                    <Link to="/homepage">Baby First</Link>
+                    <Link to="/login">Connexion</Link>
+                </div>
+            </div>
+        )
+    
 }
 
 export default Navbar;
