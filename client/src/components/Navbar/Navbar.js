@@ -9,12 +9,11 @@ const Navbar = (props) => {
         return(
             <div id="navbar">
                 <div className="section-navbar">
-                    <Link to="/homepage">Baby First</Link>
+                    <Link to="/">Baby First</Link>
                     <Link to="/login">Connexion</Link>
                 </div>
             </div>
-        )
-    
+        )   
 }
 
 export default Navbar;
