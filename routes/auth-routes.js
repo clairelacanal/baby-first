@@ -12,6 +12,7 @@ authRoutes.post('/signup', (req, res, next) => {
   const username = req.body.username;
   const email = req.body.email;
   const password = req.body.password;
+  const confirmedPassword = req.body.confirmedPassword;
   
   if (!username || !email || !password) {
     res.status(400).json({ message: 'Vous devez remplir les champs Nom, Email et Mot de passe' });
@@ -20,6 +21,16 @@ authRoutes.post('/signup', (req, res, next) => {
 
   if (password.length < 7) {
     res.status(400).json({ message: 'Votre mot de passe doit contenir au minimum 7 caractères' });
+    return;
+  }
+
+  if(!confirmedPassword) {
+    res.status(400).json({message: 'Vous devez confirmer votre mot de passe'});
+    return;
+  }
+
+  if(password !== confirmedPassword) {
+    res.status(400).json({message: 'La confirmation du mot de passe ne correspond pas au mot de passe'});
     return;
   }
   
@@ -32,11 +43,13 @@ authRoutes.post('/signup', (req, res, next) => {
     
       const salt     = bcrypt.genSaltSync(10);
       const hashPass = bcrypt.hashSync(password, salt);
+      const confirmedHashPass = bcrypt.hashSync(confirmedPassword);
     
       const aNewUser = new User({ // ce qu'il y aura dans ma base de données
         username:username,
         email:email,
-        passwordHash: hashPass
+        passwordHash: hashPass,
+        confirmedpasswordHash: confirmedHashPass
       });
     
     

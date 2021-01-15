@@ -9,6 +9,7 @@ class Signup extends React.Component {
         username:"",
         email:"",
         password:"",
+        confirmedPassword:"",
         redirect: false
     }
 
@@ -18,13 +19,15 @@ class Signup extends React.Component {
         const username = this.state.username;
         const email = this.state.email;
         const password = this.state.password;
+        const confirmedPassword = this.state.confirmedPassword;
 
-        signup(username, email, password)
+        signup(username, email, password, confirmedPassword)
         .then(response => {
             this.setState({
                username: "",
                email: "",
                password: "",
+               confirmedPassword: "",
                redirect: true 
             })
             this.props.updateUser(response)
@@ -50,16 +53,29 @@ class Signup extends React.Component {
                     <div className="form-signup">
                         <h1>Créez votre compte</h1>
                         <form onSubmit={this.handleFormSubmit} className="form-signup">
-                            <label>Nom :</label>
+                            <label>Nom:</label>
                             <input type="text" name="username" value={this.state.username} onChange={ event => this.handleChange(event)}/>
 
-                            <label>Email :</label>
+                            <label>Email:</label>
                             <input type="email" name="email" value={this.state.username} onChange={ event => this.handleChange(event)}/>
-                        </form>
 
+                            <label>Mot de passe:</label>
+                            <input type="text" name="password" value={this.state.password} onChange={ event => this.handleChange(event)}/>
+
+                            <label>Confirmation:</label>
+                            <input type="text" name="confirmedPassword" value={this.state.confirmedPassword} onChange={ event => this.handleChange(event)}/>
+
+                            <button className="button-signup">Créer le compte</button>
+                        </form>
+                        <p>
+                            Vous avez déjà un compte ?
+                            <Link to={"/login"}>Connectez-vous</Link>
+                        </p>
                     </div>
                 </div>
             </div>
         )
     }
 }
+
+export default Signup;

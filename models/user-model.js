@@ -20,6 +20,11 @@ const userSchema = new Schema({
 		type: String,
 		required: [true, "Password is required"],
   },
+
+  confirmedpasswordHash : {	
+		type: String,
+		required: [true, "Password is required"],
+  },
 }, 
 {
   timestamps: new Date()
