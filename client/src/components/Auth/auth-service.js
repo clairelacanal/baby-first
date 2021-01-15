@@ -16,8 +16,8 @@ function loggedin() {
 }
 export {loggedin}
 
-function login(username, password) {
-  return service.post('/auth/login', {username, password}).then(response => response.data)
+function login(email, password) {
+  return service.post('/auth/login', {email, password}).then(response => response.data)
 }
 export {login}
 

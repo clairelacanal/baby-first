@@ -73,10 +73,10 @@ authRoutes.post('/signup', (req, res, next) => {
 
 authRoutes.post('/login', (req, res, next) => {
 
-  //login by username
-  const {username, password} = req.body // On récuipère le username et le mot de passe qu'on a mis durant le login
+  //login by email
+  const {email, password} = req.body // On récuipère le username et le mot de passe qu'on a mis durant le login
 
-  User.findOne({username})
+  User.findOne({email})
   .then(user => {
     if (!user) {
       return next(new Error("Il n'y a pas d'utilisateur avec ce nom là"))
