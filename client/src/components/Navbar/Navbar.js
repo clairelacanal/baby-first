@@ -10,7 +10,7 @@ const Navbar = (props) => {
             <div id="navbar">
                 <div className="section-navbar">
                     <Link to="/">Baby First</Link>
-                    <Link to="/login">Connexion</Link>
+                    <Redirect to={"/login"}>Créez un compte gratuitement</Redirect>
                 </div>
             </div>
         )   
