@@ -11,7 +11,7 @@ const Navbar = (props) => {
                 <div className="section-navbar">
                     <ul>
                         <li><Link to="/">Baby First</Link></li>
-                        <li><Link to="/login">Connexion</Link></li>
+                        <button className="button-login"><Link to="/login">Connexion</Link></button>
                     </ul>
                 </div>
             </div>
