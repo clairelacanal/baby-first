@@ -9,8 +9,10 @@
 }
 
 .image-homepage {
-    background-color: yellow;
-    width: 100px;
-    height: 100px;
-    margin-left: 20em;
+    background-image: url('../../images/image-homepage.jpeg');
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-left: 7em;
 }

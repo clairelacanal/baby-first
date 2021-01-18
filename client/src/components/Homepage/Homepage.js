@@ -7,7 +7,7 @@ class Home extends React.Component {
         return(
             <div id="homepage">
                 <div className="image-homepage">
-                    <p>image</p>
+                    
                 </div>
                 <div className="signup-homepage">
                     <p>signup</p>
