@@ -9,8 +9,10 @@ const Navbar = (props) => {
         return(
             <div id="navbar">
                 <div className="section-navbar">
-                    <Link to="/">Baby First</Link>
-                    <Redirect to={"/login"}>Créez un compte gratuitement</Redirect>
+                    <ul>
+                        <Link to="/">Baby First</Link>
+                        <Link to="/login">Connexion</Link>
+                    </ul>
                 </div>
             </div>
         )   
