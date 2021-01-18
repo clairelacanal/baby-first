@@ -17,3 +17,13 @@
     border: 3px solid #ffe5b9;
     margin-left: 7em;
 }
+
+.signup-homepage {
+    margin-right: 30em;
+    margin-bottom: 15em;
+}
+
+.signup-homepage .presentation-homepage p {
+    color: #a6a9b6;
+    font-weight: 700;
+}

@@ -11,7 +11,10 @@ class Home extends React.Component {
                     
                 </div>
                 <div className="signup-homepage">
-                    <p>signup</p>
+                    <div className="presentation-homepage">
+                        <h1>Les premières fois de mon bébé</h1>
+                        <p>Un album en ligne et personnalisé des premières fois de votre bébé</p>
+                    </div>
                 </div>
             </div>
         )
