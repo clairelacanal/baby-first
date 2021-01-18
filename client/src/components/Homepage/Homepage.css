@@ -2,4 +2,15 @@
     background-image: url('../../images/background-image.jpg');
     background-size: cover;
     height: 97vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image-homepage {
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    margin-left: 20em;
 }
