@@ -10,8 +10,8 @@ const Navbar = (props) => {
             <div id="navbar">
                 <div className="section-navbar">
                     <ul>
-                        <Link to="/">Baby First</Link>
-                        <Link to="/login">Connexion</Link>
+                        <li><Link to="/">Baby First</Link></li>
+                        <li><Link to="/login">Connexion</Link></li>
                     </ul>
                 </div>
             </div>
