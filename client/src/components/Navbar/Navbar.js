@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 import {logout} from '../Auth/auth-service';
+import {login} from '../Auth/auth-service'
 import './Navbar.css';
 import {GiBabyBottle} from 'react-icons/gi';
 
