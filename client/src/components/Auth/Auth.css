@@ -10,6 +10,16 @@
     height: 100vh;
 }
 
+.form-signup {
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+
 
 
 
