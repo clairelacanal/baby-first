@@ -52,6 +52,8 @@ class Signup extends React.Component {
                 <div className="section-signup">
                     <div className="form-signup">
                         <h1>Créez votre compte</h1>
+                        <p>La création d'un compte est libre et gratuite</p>
+                        <p>Ce compte permet de commencer votre album sans aucun engagement.</p>
                         <form onSubmit={this.handleFormSubmit} className="form-signup">
                             <label>Nom:</label>
                             <input type="text" name="username" value={this.state.username} onChange={ event => this.handleChange(event)}/>

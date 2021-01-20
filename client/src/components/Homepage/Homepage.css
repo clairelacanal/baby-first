@@ -1,5 +1,5 @@
 #homepage {
-    background-image: url('../../images/background-image.jpg');
+    background-image: url('../images/background-image.jpg');
     background-size: cover;
     height: 97vh;
     display: flex;
@@ -9,7 +9,7 @@
 }
 
 .image-homepage {
-    background-image: url('../../images/image-homepage.jpeg');
+    background-image: url('../images/image-homepage.jpeg');
     background-size: cover;
     width: 300px;
     height: 300px;
