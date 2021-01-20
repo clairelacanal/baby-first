@@ -50,6 +50,10 @@ class Signup extends React.Component {
         return(
             <div id="signup">
                 <div className="section-signup">
+                    <div class="images-signup">
+                        <p>image1</p>
+                        <p>image2</p>
+                    </div>
                     <div className="form-signup">
                         <h1>Créez votre compte</h1>
                         <p>La création d'un compte est libre et gratuite</p>
