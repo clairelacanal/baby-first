@@ -64,16 +64,16 @@ class Signup extends React.Component {
                         <p>La création d'un compte est libre et gratuite.<br/> Ce compte permet de commencer votre album sans aucun engagement.</p>
                         <form onSubmit={this.handleFormSubmit} className="formulaire-signup">
                             <label>Nom</label>
-                            <input type="text" name="username" value={this.state.username} onChange={ event => this.handleChange(event)}/>
+                            <input type="text" name="username" value={this.state.username} placeholder="Votre nom d'utilisateur" onChange={ event => this.handleChange(event)}/>
 
                             <label>Email</label>
-                            <input type="email" name="email" value={this.state.username} onChange={ event => this.handleChange(event)}/>
+                            <input type="email" name="email" value={this.state.username} placeholder="Votre email" onChange={ event => this.handleChange(event)}/>
 
                             <label>Mot de passe</label>
-                            <input type="text" name="password" value={this.state.password} onChange={ event => this.handleChange(event)}/>
+                            <input type="text" name="password" value={this.state.password} placeholder="Mot de passe" onChange={ event => this.handleChange(event)}/>
 
                             <label>Confirmation</label>
-                            <input type="text" name="confirmedPassword" value={this.state.confirmedPassword} onChange={ event => this.handleChange(event)}/>
+                            <input type="text" name="confirmedPassword" value={this.state.confirmedPassword} placeholder="Confirmer le mot de passe" onChange={ event => this.handleChange(event)}/>
 
                             <button className="button-signup">Créer le compte</button>
                         </form>
