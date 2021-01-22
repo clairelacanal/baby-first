@@ -56,7 +56,7 @@ form {
     border: 1px solid #00a8ff;
 }
 
-.images-signup {
+.images-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -101,9 +101,20 @@ form {
 
 /*LOGIN*/
 
+.section-login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+}
+
 .form-login {
-    background-color: yellow;
-    width: 200px;
-    height: 800px;
-    margin-top: 50px;
+    background-color: #f5f6fa;
+    width: 40em;
+    border-radius: 0.2em;
+    padding: 1em;
 }

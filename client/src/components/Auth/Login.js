@@ -56,6 +56,15 @@ class Login extends React.Component {
                     <Link to={"/signup"}> Créez un compte gratuitement</Link>
                     </p>
                     </div>
+                    <div className="container-images">
+                        <div className="images-container">
+                            <div className="image-one"></div>
+                            <div className="image-two"></div>
+                        </div>
+                        <div className="container-titre">
+                            <h2>Immortalisez ses premiers pas</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

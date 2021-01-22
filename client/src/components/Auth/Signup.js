@@ -51,7 +51,7 @@ class Signup extends React.Component {
             <div id="signup">
                 <div className="section-signup">
                     <div className="container-image">
-                        <div className="images-signup">
+                        <div className="images-container">
                             <div className="image-one"></div>
                             <div className="image-two"></div>
                         </div>
