@@ -15,10 +15,6 @@
     width: 40em;
 }
 
-.form-signup p {
-    line-height: 0;
-}
-
 form {
     display: flex;
     flex-direction: column;
