@@ -27,6 +27,18 @@ form {
     text-align: center;
 }
 
+.form-signup input {
+    width: 30em;
+    height: 2em;
+    border-radius: 0.3em;
+}
+
+.button-signup {
+    width: 30.3em;
+    height: 2em;
+    border-radius: 0.3em;
+}
+
 .images-signup {
     display: flex;
     flex-direction: row;
@@ -34,9 +46,7 @@ form {
 }
 
 
-
-
-
+/*LOGIN*/
 
 .form-login {
     background-color: yellow;
