@@ -50,7 +50,7 @@ class Login extends React.Component {
                             <label>Mot de passe:</label>
                             <input type="password" name="password" value={this.state.password} onChange={event => this.handleChange(event)}/>
                         
-                            <button className="button-login">Connexion</button>
+                            <button className="login-button">Connexion</button>
                         </form>
                     <p>
                     <Link to={"/signup"}> Créez un compte gratuitement</Link>

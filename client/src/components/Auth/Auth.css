@@ -118,3 +118,35 @@ form {
     border-radius: 0.2em;
     padding: 1em;
 }
+
+.form-login p {
+    text-align: center;
+}
+
+.form-login h1 {
+    text-align: center;
+}
+
+.form-login input {
+    padding-left: 0.5em;
+}
+
+.form-login a {
+    text-decoration: none;
+    color: #00a8ff;
+}
+
+.form-login input {
+    width: 30em;
+    height: 2em;
+    border-radius: 0.3em;
+}
+
+.login-button {
+    width: 30.3em;
+    height: 3em;
+    border-radius: 0.3em;
+    color: #ffff;
+    background-color: #00a8ff;
+    border: 1px solid #00a8ff;
+}
