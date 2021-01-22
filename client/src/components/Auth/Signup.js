@@ -50,14 +50,19 @@ class Signup extends React.Component {
         return(
             <div id="signup">
                 <div className="section-signup">
-                    <div className="images-signup">
-                        <div className="image-one"></div>
-                        <div className="image-two"></div>
+                    <div className="container-image">
+                        <div className="images-signup">
+                            <div className="image-one"></div>
+                            <div className="image-two"></div>
+                        </div>
+                        <div className="container-titre">
+                            <h2>Immortalisez ses premiers pas</h2>
+                        </div>
                     </div>
                     <div className="form-signup">
                         <h1>Créez votre compte</h1>
                         <p>La création d'un compte est libre et gratuite.<br/> Ce compte permet de commencer votre album sans aucun engagement.</p>
-                        <form onSubmit={this.handleFormSubmit} className="form-signup">
+                        <form onSubmit={this.handleFormSubmit} className="formulaire-signup">
                             <label>Nom</label>
                             <input type="text" name="username" value={this.state.username} onChange={ event => this.handleChange(event)}/>
 
@@ -67,7 +72,7 @@ class Signup extends React.Component {
                             <label>Mot de passe</label>
                             <input type="text" name="password" value={this.state.password} onChange={ event => this.handleChange(event)}/>
 
-                            <label>Confirmation:</label>
+                            <label>Confirmation</label>
                             <input type="text" name="confirmedPassword" value={this.state.confirmedPassword} onChange={ event => this.handleChange(event)}/>
 
                             <button className="button-signup">Créer le compte</button>

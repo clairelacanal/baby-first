@@ -1,5 +1,4 @@
 .section-signup {
-    background-color: red;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -11,8 +10,10 @@
 }
 
 .form-signup {
-    background-color: pink;
+    background-color: #f5f6fa;
     width: 40em;
+    border-radius: 0.2em;
+    padding: 1em;
 }
 
 .form-signup p {
@@ -31,6 +32,11 @@ form {
     text-align: center;
 }
 
+.form-signup a {
+    text-decoration: none;
+    color: #00a8ff;
+}
+
 .form-signup input {
     width: 30em;
     height: 2em;
@@ -41,6 +47,8 @@ form {
     width: 30.3em;
     height: 2em;
     border-radius: 0.3em;
+    background-color: #00a8ff;
+    border: 1px solid #00a8ff;
 }
 
 .images-signup {
@@ -51,6 +59,14 @@ form {
     margin-bottom: 15em;
 }
 
+.container-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: yellow;
+}
+
 .image-one {
     background-image: url('../images/photo1-babyplay.jpeg');
     background-size: cover;
@@ -58,6 +74,7 @@ form {
     height: 200px;
     margin-right: 3em;
     border-radius: 50%;
+    border: 10px solid #dcdde1;
 }
 
 .image-two {
@@ -66,7 +83,10 @@ form {
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    border: 10px solid #dcdde1;
 }
+
+
 
 
 /*LOGIN*/
