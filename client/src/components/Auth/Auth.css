@@ -42,14 +42,16 @@ form {
 .images-signup {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 20em;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 15em;
 }
 
 .image-one {
     background-color: pink;
     width: 200px;
     height: 200px;
+    margin-right: 3em;
 }
 
 .image-two {
