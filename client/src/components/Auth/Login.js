@@ -43,11 +43,12 @@ class Login extends React.Component {
             <div id="login">
                 <div className="section-login">
                     <div className="form-login">
+                        <h1>Connectez-vous à vore compte</h1>
                         <form onSubmit={this.handleFormSubmit} className="form-login">
-                            <label>Email:</label>
+                            <label>Email</label>
                             <input type="email" name="email" value={this.state.email} onChange={event => this.handleChange(event)}/>
 
-                            <label>Mot de passe:</label>
+                            <label>Mot de passe</label>
                             <input type="password" name="password" value={this.state.password} onChange={event => this.handleChange(event)}/>
                         
                             <button className="login-button">Connexion</button>
@@ -62,7 +63,7 @@ class Login extends React.Component {
                             <div className="image-two"></div>
                         </div>
                         <div className="container-titre">
-                            <h2>Immortalisez ses premiers pas</h2>
+                            <h2>"L'essence de l'indépendance est de pouvoir faire quelque chose pour soi-même."</h2>
                         </div>
                     </div>
                 </div>

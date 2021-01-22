@@ -114,9 +114,8 @@ form {
 
 .form-login {
     background-color: #f5f6fa;
-    width: 40em;
+    width: 30em;
     border-radius: 0.2em;
-    padding: 1em;
 }
 
 .form-login p {
