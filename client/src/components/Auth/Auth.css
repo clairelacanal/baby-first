@@ -42,7 +42,20 @@ form {
 .images-signup {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     margin-bottom: 20em;
+}
+
+.image-one {
+    background-color: pink;
+    width: 200px;
+    height: 200px;
+}
+
+.image-two {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
 }
 
 
