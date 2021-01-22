@@ -45,7 +45,7 @@ form {
 
 .button-signup {
     width: 30.3em;
-    height: 2em;
+    height: 3em;
     border-radius: 0.3em;
     background-color: #00a8ff;
     border: 1px solid #00a8ff;
@@ -56,15 +56,14 @@ form {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    margin-bottom: 15em;
+    margin-bottom: 3em;
 }
 
 .container-image {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: yellow;
+    align-items: flex-start;
+    margin-bottom: 15em;
 }
 
 .image-one {
@@ -85,6 +84,11 @@ form {
     border-radius: 50%;
     border: 10px solid #dcdde1;
 }
+
+.container-titre h2 {
+    margin : 0;
+}
+
 
 
 
