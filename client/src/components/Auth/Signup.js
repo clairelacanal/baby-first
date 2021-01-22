@@ -56,15 +56,15 @@ class Signup extends React.Component {
                     </div>
                     <div className="form-signup">
                         <h1>Créez votre compte</h1>
-                        <p>La création d'un compte est libre et gratuite. Ce compte permet de commencer votre album sans aucun engagement.</p>
+                        <p>La création d'un compte est libre et gratuite.<br/> Ce compte permet de commencer votre album sans aucun engagement.</p>
                         <form onSubmit={this.handleFormSubmit} className="form-signup">
-                            <label>Nom:</label>
+                            <label>Nom</label>
                             <input type="text" name="username" value={this.state.username} onChange={ event => this.handleChange(event)}/>
 
-                            <label>Email:</label>
+                            <label>Email</label>
                             <input type="email" name="email" value={this.state.username} onChange={ event => this.handleChange(event)}/>
 
-                            <label>Mot de passe:</label>
+                            <label>Mot de passe</label>
                             <input type="text" name="password" value={this.state.password} onChange={ event => this.handleChange(event)}/>
 
                             <label>Confirmation:</label>
@@ -74,7 +74,7 @@ class Signup extends React.Component {
                         </form>
                         <p>
                             Vous avez déjà un compte ?
-                            <Link to={"/login"}>Connectez-vous</Link>
+                            <Link to={"/login"}>&nbsp;&nbsp;Connectez-vous</Link>
                         </p>
                     </div>
                 </div>
