@@ -8,7 +8,7 @@ import Login from './components/Auth/Login';
 import Signup from './components/Auth/Signup';
 import { loggedin } from './components/Auth/auth-service';
 
-class App extends React.component {
+class App extends React.Component {
   state = {
     loggedInUser: null
   }
@@ -39,7 +39,7 @@ class App extends React.component {
         <Navbar/>
         <Switch>
         <Route exact path="/" component = {Home} />
-        <Route exact path="/signup" component = {Signup} />
+        <Route exact path="/signup" render ={() => <Signup updateUser = {this.updateLoggedInUser}/>}/>
         <Route exact path="/login" component = {Login} />
         </Switch>
         <Footer/>
