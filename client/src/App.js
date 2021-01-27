@@ -6,10 +6,31 @@ import Footer from './components/Footer/Footer';
 import Home from './components/Homepage/Homepage';
 import Login from './components/Auth/Login';
 import Signup from './components/Auth/Signup';
+import { loggedin } from './components/Auth/auth-service';
 
 class App extends React.component {
   state = {
     loggedInUser: null
+  }
+
+  fetchUser = () => {
+    if(this.state.loggedInUser === null) {
+      loggedin()
+      .then(response => {
+        this.setState({loggedInUser: response})
+      })
+      .catch(err => {
+        this.setState({loggedInUser: false})
+      })
+    }
+  }
+
+  componentDiMount(){
+    this.fetchUser();
+  }
+
+  updateLoggedInUser = (userObj) => {
+    this.setState({ loggedInUser: userObj})
   }
   
   render () {
