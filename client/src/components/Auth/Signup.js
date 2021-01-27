@@ -67,7 +67,7 @@ class Signup extends React.Component {
                             <input type="text" name="username" value={this.state.username} placeholder="Votre nom d'utilisateur" onChange={ event => this.handleChange(event)}/>
 
                             <label>Email</label>
-                            <input type="email" name="email" value={this.state.username} placeholder="Votre email" onChange={ event => this.handleChange(event)}/>
+                            <input type="email" name="email" value={this.state.email} placeholder="Votre email" onChange={ event => this.handleChange(event)}/>
 
                             <label>Mot de passe</label>
                             <input type="text" name="password" value={this.state.password} placeholder="Mot de passe" onChange={ event => this.handleChange(event)}/>
