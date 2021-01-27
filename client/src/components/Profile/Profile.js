@@ -12,16 +12,26 @@ class Profile extends React.Component {
     
     getUserProfile = () => {
         const params = this.props.match.params;
+        service.get(`/auth/profile/${params.id}`)
         .then(responseFromApi => {
-            const theUser = params.id;
+            const theUser = responseFromApi.data;
             this.setState({user: theUser});
         })
-        .catch(err => {
-            console.log(`Le user profile n'est pas le bon`);
+        .catch((err) => {
+            console.log(`Le user profile n'est pas le bon`, err);
         })
     }
-        return(
 
+    componentDidMount(){
+        this.getUserProfile();
+    }
+
+        return(
+            <div id="profile">
+                <div className="section-profile">
+                    
+                </div>
+            </div>
         )
     }
 
