@@ -39,7 +39,7 @@ class App extends React.Component {
         <Navbar/>
         <Switch>
         <Route exact path="/" component = {Home} />
-        <Route exact path="/signup" render ={() => <Signup updateUser = {this.updateLoggedInUser}/>}/>
+        <Route exact path="/signup" render ={() => <Signup updateUser= {this.updateLoggedInUser}/>}/>
         <Route exact path="/login" component = {Login} />
         </Switch>
         <Footer/>

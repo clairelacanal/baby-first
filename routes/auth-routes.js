@@ -14,7 +14,7 @@ authRoutes.post('/signup', (req, res, next) => {
   const password = req.body.password;
   const confirmedPassword = req.body.confirmedPassword;
   
-  if (!username || !email || !password) {
+  if (!username || !email || !password || !confirmedPassword) {
     res.status(400).json({ message: 'Vous devez remplir les champs Nom, Email et Mot de passe' });
     return;
   }

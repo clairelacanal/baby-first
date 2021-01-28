@@ -29,7 +29,7 @@ class Signup extends React.Component {
                password: "",
                confirmedPassword: "",
                redirect: true 
-            })
+            });
             this.props.updateUser(response)
         })
         .catch(error => console.log(error))
