@@ -6,8 +6,8 @@ const service = axios.create({
 });
 export default service;
 
-function signup(username, email, password) {
-  return service.post('/auth/signup', {username, email, password}).then(response => response.data)
+function signup(username, email, password, confirmedPassword) {
+  return service.post('/auth/signup', {username, email, password, confirmedPassword}).then(response => response.data)
 }
 export {signup}
 
