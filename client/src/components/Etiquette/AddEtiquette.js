@@ -1,4 +1,5 @@
 import React from 'React';
+import service from '../Auth/auth-service';
 import './Etiquette.css';
 
 class AddEtiquette extends React.Component {
@@ -20,6 +21,11 @@ class AddEtiquette extends React.Component {
         const imageUrl = this.state.imageUrl,
         const commentaire = this.state.commentaire
 
+        service.post('/etiquette', {title, lieu, date, imageUrl, commentaire})
+        .then(() => {
+            this.setState({title:"", lieu:"", date: new Date(), imageUrl:"", redirect:true});
+        })
+        .catch(err => console.log(err));
 
     }
 
