@@ -26,7 +26,12 @@ class AddEtiquette extends React.Component {
             this.setState({title:"", lieu:"", date: new Date(), imageUrl:"", redirect:true});
         })
         .catch(err => console.log(err));
+    }
 
+    //Function handleChange()
+    handleChange = (event) => {
+        const {name, value} = event.target;
+        this.setState({[name]:value});
     }
 
     render(){
