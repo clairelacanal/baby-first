@@ -1,4 +1,5 @@
 import React from 'React';
+import { Redirect } from 'react-router-dom';
 import service, { upload } from '../Auth/auth-service';
 import './Etiquette.css';
 
@@ -45,8 +46,14 @@ class AddEtiquette extends React.Component {
     }
 
     render(){
+        const redirect = this.state;
+        if(redirect){
+            return <Redirect to="/profile"/>
+        }
         return(
-
+            <div id="section-add-etiquette">
+                
+            </div>
         )
     }
 }
