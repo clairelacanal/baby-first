@@ -52,7 +52,20 @@ class AddEtiquette extends React.Component {
         }
         return(
             <div id="section-add-etiquette">
-                
+                <div className="add-etiquette">
+                    <h1>Créez votre étiquette</h1>
+                    <div className="form-add-etiquette">
+                        <form onSubmit={this.handleSubmit} className="form-add-etiquette">
+
+                            <label>Ajouter un titre:</label>
+                            <input type="text" name="title" value={this.state.title} onChange={event => this.handleChange(event)}/>
+
+                            <label>Ajouter un lieu:</label>
+                            <input type="text" name="lieu" value={this.state.lieu} onChange={event => this.handleChange(event)}/>
+
+                        </form>
+                    </div>
+                </div>
             </div>
         )
     }
