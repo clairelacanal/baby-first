@@ -63,6 +63,17 @@ class AddEtiquette extends React.Component {
                             <label>Ajouter un lieu:</label>
                             <input type="text" name="lieu" value={this.state.lieu} onChange={event => this.handleChange(event)}/>
 
+                            <label>Ajouter une date:</label>
+                            <input type="date" name="date" value={this.state.date} onChange={event => this.handleChange(event)}/>
+
+                            <label>Télécharger une image:</label>
+                            <input type="file" name="imageUrl" value={this.state.imageUrl} onChange={event => this.handleChange(event)}/>
+
+                            <label>Ajouter un commentaire:</label>
+                            <textarea name="commentaire" value={this.state.commentaire} onChange={event => this.handleChange(event)}/>
+
+                            <button className="button-add-etiquette">Publiez</button>
+
                         </form>
                     </div>
                 </div>
