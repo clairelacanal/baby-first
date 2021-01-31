@@ -74,7 +74,7 @@ authRoutes.post('/signup', (req, res, next) => {
 authRoutes.post('/login', (req, res, next) => {
 
   //login by email
-  const {email, password} = req.body // On récuipère le username et le mot de passe qu'on a mis durant le login
+  const {email, password} = req.body // On récupère le username et le mot de passe qu'on a mis durant le login
 
   User.findOne({email})
   .then(user => {
