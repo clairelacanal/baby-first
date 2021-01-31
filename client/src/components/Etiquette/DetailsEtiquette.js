@@ -3,8 +3,9 @@ import './Etiquette.css';
 
 class DetailsEtiquette extends React.Component{
     state = {
-        
+        etiquette : {}
     }
+
     render(){
         return()
     }
