@@ -21,6 +21,10 @@ class DetailsEtiquette extends React.Component{
         })
     }
 
+    componentDiMount(){
+        this.getOneEtiquette()
+    }
+
     render(){
         return()
     }
