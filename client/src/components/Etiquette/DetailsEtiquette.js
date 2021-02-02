@@ -58,10 +58,10 @@ class DetailsEtiquette extends React.Component{
                         </div>
                         <div className="differents-buttons">
                             <div className="button-modified">
-                                
+                                <Link to={'/modify-etiquette'}>Modifier</Link>
                             </div>
                             <div className="button-delete">
-
+                                <p className="deleteButton" onClick={() => this.deleteEtiquette()}>Supprimer</p>
                             </div>
                         </div>
                     </div>
