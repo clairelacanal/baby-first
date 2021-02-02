@@ -43,7 +43,23 @@ class DetailsEtiquette extends React.Component{
 
 
     render(){
-        return()
+        return(
+            <div id="section-details-etiquette">
+                <div className="container-details-etiquette">
+                    <div className="details-etiquette">
+                        <div className="image">
+                            <img src={this.state.etiquette.imageUrl} alt="image de l'étiquette"/>
+                        </div>
+                        <div className="details">
+                            <h1>{this.state.etiquette.title}</h1>
+                            <p><span>Lieu: {this.state.etiquette.lieu}</span></p>
+                            <p><span>Date: {this.state.etiquette.date}</span></p>
+                            <p><span>Commentaire: {this.state.etiquette.commentaire}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
     }
 }
 
