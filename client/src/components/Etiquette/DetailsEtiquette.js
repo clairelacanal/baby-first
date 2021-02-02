@@ -56,6 +56,14 @@ class DetailsEtiquette extends React.Component{
                             <p><span>Date: {this.state.etiquette.date}</span></p>
                             <p><span>Commentaire: {this.state.etiquette.commentaire}</span></p>
                         </div>
+                        <div className="differents-buttons">
+                            <div className="button-modified">
+                                
+                            </div>
+                            <div className="button-delete">
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
