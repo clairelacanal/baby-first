@@ -32,7 +32,14 @@ class ModifyEtiquette extends React.Component {
     }
 
     //function handleChange pour changer l'ancienne valeur en nouvelle valeur
-    
+
+    handleChange(element) {
+        let inputName = element.target.name;
+        let inputValue = element.target.value;
+
+        let newEtiquette = Object.assign({},this.state);
+        newEtiquette.etiquette[inputName].value = inputValue;
+    }
 
     render(){
         return(
