@@ -37,12 +37,12 @@ class App extends React.Component {
   render () {
     return(
       <div className="App">
-        <Navbar/>
+        <Navbar userInSession={this.state.loggedInUser} updateUser={this.updateLoggedInUser}/>
         <Switch>
         <Route exact path="/" component = {Home} />
         <Route exact path="/signup" render ={() => <Signup updateUser= {this.updateLoggedInUser}/>}/>
-        <Route exact path="/login"  render ={() => <Login updateUser= {this.updateLoggedInUser} user={this.state.loggedInUser}/>}
-        <Route exact path="/profile/:id" render = {(props) => <Profile {...props} user={this.state.loggedInUser}/>}/>
+        <Route exact path="/login"  render ={() => <Login updateUser= {this.updateLoggedInUser} user={this.state.loggedInUser}/>}/>
+        <Route exact path="/profile/:id" render={() => <Profile user={this.state.loggedInUser}/>}/>
         </Switch>
         <Footer/>
     </div>

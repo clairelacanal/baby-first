@@ -5,7 +5,7 @@ import {logout} from '../Auth/auth-service';
 import {login} from '../Auth/auth-service'
 import './Navbar.css';
 import {GiBabyBottle} from 'react-icons/gi';
-import {IoPersonCircle} from 'react-icons/io';
+import {BsFillPersonFill} from 'react-icons/bs';
 
 
 const Navbar = (props) => {
@@ -27,7 +27,7 @@ const Navbar = (props) => {
                                 {props.userInSession.username}
                             </div>
                             <div className="profile-avatar">
-                                <IoPersonCircle className="personn-connected"/>
+                                <BsFillPersonFill className="personn-connected"/>
                             </div>
                         </div>
                     ) : (
