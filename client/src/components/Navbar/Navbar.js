@@ -19,20 +19,17 @@ const Navbar = (props) => {
                         Baby First
                         </Link>
                         </li>
-                    </ul>
-
-                    {props.userInSession ? (
+                        {props.userInSession ? (
                         <div className="profile-account">
                             <div className="profile-name">
-                                {props.userInSession.username}
-                            </div>
-                            <div className="profile-avatar">
-                                <BsFillPersonFill className="personn-connected"/>
+                                <Link to={`/profile/${props.userInSession._id}`}>{props.userInSession.username}
+                                <BsFillPersonFill className="personn-connected"/></Link>
                             </div>
                         </div>
                     ) : (
                         <button className="button-login"><Link to="/login">Connexion</Link></button>  
                     )}
+                    </ul>
                 </div>
             </div>
         )   

@@ -42,4 +42,9 @@
     font-size: 3em;
 }
 
+.profile-account {
+    display: flex;
+    flex-direction: row;
+}
+
 
