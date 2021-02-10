@@ -36,8 +36,9 @@ class Login extends React.Component {
     
     //Les fonctions handleFormSubmit et handleChange dans notre formulaire
     render() {
-        if(this.state.redirect){
-            return <Redirect to="/profile"/>
+        const {redirect} = this.state;
+        if(this.props.user?._id){
+            return <Redirect to={`/profile/${this.props.user._id}`}/>
         }
         return(
             <div id="login">

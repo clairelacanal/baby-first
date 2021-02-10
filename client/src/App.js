@@ -41,8 +41,8 @@ class App extends React.Component {
         <Switch>
         <Route exact path="/" component = {Home} />
         <Route exact path="/signup" render ={() => <Signup updateUser= {this.updateLoggedInUser}/>}/>
-        <Route exact path="/login" component = {Login} />
-        <Route exact path="/profile" component = {Profile}/>
+        <Route exact path="/login"  render ={() => <Login updateUser= {this.updateLoggedInUser} user={this.state.loggedInUser}/>}
+        <Route exact path="/profile/:id" render = {(props) => <Profile {...props} user={this.state.loggedInUser}/>}/>
         </Switch>
         <Footer/>
     </div>

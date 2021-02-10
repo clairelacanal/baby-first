@@ -5,6 +5,7 @@ import {logout} from '../Auth/auth-service';
 import {login} from '../Auth/auth-service'
 import './Navbar.css';
 import {GiBabyBottle} from 'react-icons/gi';
+import {IoPersonCircle} from 'react-icons/io';
 
 
 const Navbar = (props) => {
@@ -18,8 +19,20 @@ const Navbar = (props) => {
                         Baby First
                         </Link>
                         </li>
-                        <button className="button-login"><Link to="/login">Connexion</Link></button>
                     </ul>
+
+                    {props.userInSession ? (
+                        <div className="profile-account">
+                            <div className="profile-name">
+                                {props.userInSession.username}
+                            </div>
+                            <div className="profile-avatar">
+                                <IoPersonCircle className="personn-connected"/>
+                            </div>
+                        </div>
+                    ) : (
+                        <button className="button-login"><Link to="/login">Connexion</Link></button>  
+                    )}
                 </div>
             </div>
         )   

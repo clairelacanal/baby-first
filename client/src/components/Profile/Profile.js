@@ -31,7 +31,7 @@ class Profile extends React.Component {
             <div id="profile">
                 <div className="section-profile">
                     <div className="profile-presentation">
-                        <h1>{this.state.user.username}</h1>
+                        <h1>Bienvenue {this.state.user.username}</h1>
                         <h2>Ajoutez les premières fois de votre enfant</h2>
                         <button className="profile-add">Ajouter une nouvelle étiquette</button>
                     </div>
