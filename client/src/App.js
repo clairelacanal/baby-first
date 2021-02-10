@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import Home from './components/Homepage/Homepage';
 import Login from './components/Auth/Login';
 import Signup from './components/Auth/Signup';
+import Profile from './components/Profile/Profile';
 import { loggedin } from './components/Auth/auth-service';
 
 class App extends React.Component {
@@ -41,6 +42,7 @@ class App extends React.Component {
         <Route exact path="/" component = {Home} />
         <Route exact path="/signup" render ={() => <Signup updateUser= {this.updateLoggedInUser}/>}/>
         <Route exact path="/login" component = {Login} />
+        <Route exact path="/profile" component = {Profile}/>
         </Switch>
         <Footer/>
     </div>

@@ -8,8 +8,6 @@ class Profile extends React.Component {
         user : {}
     }
 
-    render(){
-    
     getUserProfile = () => {
         const params = this.props.match.params;
         service.get(`/auth/profile/${params.id}`)
@@ -22,10 +20,13 @@ class Profile extends React.Component {
         })
     }
 
-    componentDidMount(){
-        this.getUserProfile();
+    //Function componentDiMount()
+
+    componentDiMount(){
+        this.getUserProfile()
     }
 
+    render(){
         return(
             <div id="profile">
                 <div className="section-profile">
