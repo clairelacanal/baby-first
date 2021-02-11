@@ -9,6 +9,9 @@ import {BsFillPersonFill} from 'react-icons/bs';
 
 
 const Navbar = (props) => {
+    if(props.updateUser === null){
+        return <Redirect to="/"></Redirect>
+    }
         return(
             <div id="navbar">
                 <div className="section-navbar">
@@ -26,10 +29,12 @@ const Navbar = (props) => {
                                 <BsFillPersonFill className="personn-connected"/></Link>
                             </div>
                             <div className="profile-logout">
+                                <Link to="/">
                                 <button onClick = {(e) => {
                                     logout()
                                     .then(() => props.updateUser(null))
-                                }}/>
+                                }}>Logout</button>
+                                </Link>
                             </div>
                         </div>
                     ) : (
