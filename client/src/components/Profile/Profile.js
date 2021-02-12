@@ -1,6 +1,6 @@
 import React from 'react';
 import service from '../Auth/auth-service';
-import {Redirect} from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import './Profile.css';
 
 class Profile extends React.Component {
@@ -33,7 +33,7 @@ class Profile extends React.Component {
                     <div className="profile-presentation">
                         <h1>Bienvenue {this.state.user.username}</h1>
                         <h2>Ajoutez les premières fois de votre enfant</h2>
-                        <button className="profile-add">Ajouter une nouvelle étiquette</button>
+                        <Link to={`/etiquette/${params.id}`}><button className="profile-add">Ajouter une nouvelle étiquette</button></Link>
                     </div>
                 </div>
             </div>
