@@ -12,8 +12,12 @@ class ListEtiquette extends React.Component {
             return annoncePhrase
         }
         return(
-            <div className="listEtiquettes">
-                
+            <div id="listEtiquettes">
+                <div className="section-listEtiquettes">
+                    <div className="container-listEtiquettes">
+
+                    </div>
+                </div>
             </div>
         )
     }
