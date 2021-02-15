@@ -48,7 +48,7 @@ class AddEtiquette extends React.Component {
     render(){
         const redirect = this.state;
         if(redirect){
-            return <Redirect to="/etiquette/ajout"/>
+            return <Redirect to="/profile"/>
         }
         return(
             <div id="section-add-etiquette">

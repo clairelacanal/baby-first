@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import './Etiquette.css';
 import {Link} from 'react-router-dom';
 import service from '../Auth/auth-service';

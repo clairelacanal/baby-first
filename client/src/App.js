@@ -7,7 +7,9 @@ import Home from './components/Homepage/Homepage';
 import Login from './components/Auth/Login';
 import Signup from './components/Auth/Signup';
 import Profile from './components/Profile/Profile';
+import ListEtiquette from './components/Etiquette/ListEtiquette';
 import AddEtiquette from './components/Etiquette/AddEtiquette';
+import DetailsEtiquette from './components/Etiquette/DetailsEtiquette';
 import { loggedin } from './components/Auth/auth-service';
 
 class App extends React.Component {
@@ -44,7 +46,9 @@ class App extends React.Component {
         <Route exact path="/signup" render ={() => <Signup updateUser= {this.updateLoggedInUser}/>}/>
         <Route exact path="/login"  render ={() => <Login updateUser= {this.updateLoggedInUser} user={this.state.loggedInUser}/>}/>
         <Route exact path="/profile/:id" render={() => <Profile user={this.state.loggedInUser}/>}/>
-        <Route exact path="/etiquette/ajout" component = {AddEtiquette} />
+        <Route exact path="/etiquette" render={() => <ListEtiquette user={this.state.loggedInUser}/>}/>
+        <Route exact path="/etiquette/ajout" component={AddEtiquette} />
+        <Route exact path="/etiquette/:id" render={() => <DetailsEtiquette user={this.state.loggedInUser}/>}/>
         </Switch>
         <Footer/>
     </div>
