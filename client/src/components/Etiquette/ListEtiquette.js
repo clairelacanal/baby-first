@@ -1,5 +1,6 @@
 import React from 'React';
 import './Etiquette.css';
+import {Link} from 'react-router-dom';
 import service from '../Auth/auth-service';
 
 class ListEtiquette extends React.Component {
@@ -38,7 +39,7 @@ class ListEtiquette extends React.Component {
                                 <div key={etiquette.id}>
                                 <h4>{etiquette.title}</h4>
                                 <img src={etiquette.imageUrl} alt=""/>
-                                <Link to={`/etiquette/${etiquette._id}`}>Voir plus</Link>
+                                <button><Link to={`/etiquette/${etiquette._id}`}>Voir plus</Link></button>
                                 </div>
                             )}
                     </div>
