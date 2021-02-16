@@ -2,6 +2,7 @@ import React from 'react';
 import service from '../Auth/auth-service';
 import { Link, Redirect } from 'react-router-dom';
 import './Profile.css';
+import ListEtiquette from '../Etiquette/ListEtiquette';
 
 class Profile extends React.Component {
     state = {
@@ -34,6 +35,7 @@ class Profile extends React.Component {
                         <h1>Bienvenue {this.state.user.username}</h1>
                         <h2>Ajoutez les premières fois de votre enfant</h2>
                         <Link to={`/etiquette/ajout`}><button className="profile-add">Ajouter une nouvelle étiquette</button></Link>
+                        <ListEtiquette/>
                     </div>
                 </div>
             </div>
