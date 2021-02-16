@@ -4,6 +4,7 @@ import { Link, Redirect } from 'react-router-dom';
 import './Profile.css';
 import ListEtiquette from '../Etiquette/ListEtiquette';
 
+
 class Profile extends React.Component {
     state = {
         user : {}
