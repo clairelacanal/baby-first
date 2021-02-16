@@ -46,7 +46,10 @@ class AddEtiquette extends React.Component {
     }
 
     render(){
-        
+        const {redirect} = this.state;
+        if(this.props.user?._id){
+            return <Redirect to={`/profile/${this.props.user._id}`}/>
+        }
         return(
             <div id="section-add-etiquette">
                 <div className="add-etiquette">
@@ -69,7 +72,8 @@ class AddEtiquette extends React.Component {
                             <label>Ajouter un commentaire:</label>
                             <textarea name="commentaire" value={this.state.commentaire} onChange={event => this.handleChange(event)}/>
 
-                            <button className="button-add-etiquette">Publiez</button>
+
+                           <button className="button-add-etiquette">Publiez</button>
 
                         </form>
                     </div>
