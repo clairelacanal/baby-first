@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import service, { upload } from '../Auth/auth-service';
 import './Etiquette.css';
 
@@ -73,7 +74,7 @@ class AddEtiquette extends React.Component {
                             <textarea name="commentaire" value={this.state.commentaire} onChange={event => this.handleChange(event)}/>
 
 
-                           <button className="button-add-etiquette">Publiez</button>
+                           <Link to={`/profile/:id`}><button className="button-add-etiquette">Publiez</button></Link>
 
                         </form>
                     </div>
