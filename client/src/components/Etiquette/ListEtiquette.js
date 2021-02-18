@@ -30,7 +30,6 @@ class ListEtiquette extends React.Component {
         if(this.state.listOfEtiquettes.length === 0 ) {
             return annoncePhrase
         }
-
         return(
             <div id="listEtiquettes">
                 <div className="section-listEtiquettes">
