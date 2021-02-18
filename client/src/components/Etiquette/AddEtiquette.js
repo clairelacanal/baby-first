@@ -73,8 +73,8 @@ class AddEtiquette extends React.Component {
                             <label>Ajouter un commentaire:</label>
                             <textarea name="commentaire" value={this.state.commentaire} onChange={event => this.handleChange(event)}/>
 
-
-                           <Link to={`/profile/:id`}><button className="button-add-etiquette">Publiez</button></Link>
+                                
+                            <button className="button-add-etiquette">Publiez</button>
 
                         </form>
                     </div>
