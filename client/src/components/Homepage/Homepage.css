@@ -1,11 +1,15 @@
+
+
 #homepage {
-    background-image: url('../images/background-image.jpg');
-    background-size: cover;
     height: 97vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    background-image: linear-gradient(rgba(255,255,255, 0.4), rgba(255,255,255, 0.4)),
+    url('../images/background-image.jpg');
+    background-size: cover;
+    
 }
 
 .image-homepage {
@@ -21,10 +25,11 @@
 .signup-homepage {
     margin-right: 30em;
     margin-bottom: 15em;
+    
 }
 
 .signup-homepage .presentation-homepage p {
-    color: #a6a9b6;
+    color: #3d3d3d;
     font-weight: 700;
 }
 
@@ -35,4 +40,5 @@
     height: 3em;
     border-radius: 0.3em;
     color: #ffff;
+    font-weight: 700;
 }
