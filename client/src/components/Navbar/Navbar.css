@@ -45,6 +45,22 @@
 .profile-account {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-logout button {
+    margin-left: 1em;
+    background-color: #00a8ff;
+    border: 1px solid #00a8ff;
+    width: 7em;
+    height: 2em;
+    border-radius: 0.4em;
+}
+
+.personn-connected {
+    color: red;
+    font-size: 35px;
 }
 
 
