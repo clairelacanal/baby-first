@@ -25,7 +25,7 @@ const Navbar = (props) => {
                         {props.userInSession ? (
                         <div className="profile-account">
                             <div className="profile-name">
-                                <Link to={`/profile/${props.userInSession._id}`}>{props.userInSession.username}
+                                <Link to={`/profile/${props.userInSession._id}`}>
                                 <BsFillPersonFill className="personn-connected"/></Link>
                             </div>
                             <div className="profile-logout">
