@@ -1,4 +1,21 @@
+#profile {
+    background-image: linear-gradient(rgba(255,255,255, 0.4), rgba(255,255,255, 0.4)),
+    url('../images/background-image.jpg');
+    background-size: cover;
+    height: 97vh;
+}
+
 .profile-presentation {
-    background-color: yellow;
-    margin-top: 200px;
+    padding: 15em;
+    text-align: center;
+}
+
+.profile-add {
+    background-color: #cf6a87;
+    border: 1px solid #cf6a87;
+    width: 30.3em;
+    height: 3em;
+    border-radius: 0.3em;
+    color: #ffff;
+    font-weight: 700;
 }
