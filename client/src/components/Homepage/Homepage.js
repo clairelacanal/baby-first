@@ -1,7 +1,6 @@
 import React from 'react';
 import './Homepage.css';
-import {signup} from '../Auth/auth-service';
-import { Link, Redirect } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 
 
@@ -20,7 +19,7 @@ class Home extends React.Component {
                         <p>Un album en ligne et personnalisé des premières fois de votre bébé</p>
                     </div>
                     <div className="signup-access">
-                            <Link to={"/signup"}><button className="button-signup">Ouvrir votre compte</button></Link>
+                            <Link to={"/signup"}><button className="button-signup-access">Ouvrir votre compte</button></Link>
                     </div>
                 </div>
             </div>
