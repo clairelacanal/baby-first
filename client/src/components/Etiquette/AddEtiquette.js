@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import {Link} from 'react-router-dom';
+import {login} from '../Auth/auth-service';
 import service, { upload } from '../Auth/auth-service';
 import './Etiquette.css';
 
@@ -13,6 +14,7 @@ class AddEtiquette extends React.Component {
         commentaire:"",
         redirect: false
     }
+
 
     //Function handleSubmit()
     handleSubmit = (event) => {
@@ -49,7 +51,7 @@ class AddEtiquette extends React.Component {
     render(){
         const {redirect} = this.state;
         if(this.props.user?._id){
-            return <Redirect to={`/profile/${this.props.user._id}`}/>
+            return <Redirect to={`/profile/${this.props.user._id}`}></Redirect> 
         }
         return(
             <div id="section-add-etiquette">
@@ -74,7 +76,8 @@ class AddEtiquette extends React.Component {
                             <textarea name="commentaire" value={this.state.commentaire} onChange={event => this.handleChange(event)}/>
 
                                 
-                            <button className="button-add-etiquette">Publiez</button>
+                            
+                            <button> Publiez</button>
 
                         </form>
                     </div>
