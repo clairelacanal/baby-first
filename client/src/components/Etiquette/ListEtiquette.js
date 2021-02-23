@@ -26,9 +26,10 @@ class ListEtiquette extends React.Component {
     }
 
     render(){
+        let reponse="";
         const annoncePhrase = "Tu n'as pas encore d'étiquette";
         if(this.state.listOfEtiquettes.length === 0 ) {
-            return annoncePhrase
+            reponse = annoncePhrase;
         }
         return(
             <div id="listEtiquettes">

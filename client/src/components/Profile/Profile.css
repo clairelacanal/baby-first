@@ -6,7 +6,7 @@
 }
 
 .profile-presentation {
-    padding: 15em;
+    padding: 6em;
     text-align: center;
 }
 
@@ -18,4 +18,11 @@
     border-radius: 0.3em;
     color: #ffff;
     font-weight: 700;
+}
+
+.show-etiquette {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    margin-top: 3em;
 }

@@ -7,7 +7,7 @@ import ListEtiquette from '../Etiquette/ListEtiquette';
 
 class Profile extends React.Component {
     state = {
-        user : {}
+        user : {},
     }
 
     getUserProfile = () => {

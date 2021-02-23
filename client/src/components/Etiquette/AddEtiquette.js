@@ -50,7 +50,7 @@ class AddEtiquette extends React.Component {
 
     render(){
         const {redirect} = this.state;
-        if(this.props.user?._id){
+        if(redirect){
             return <Redirect to={`/profile/${this.props.user._id}`}></Redirect> 
         }
         return(

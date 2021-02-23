@@ -7,10 +7,10 @@
 }
 
 .container-listEtiquettes {
-    background-color: blue;
+    color: blue;
     width: 600px;
-    height: 600px;
-    margin-left: 50em;
-    margin-top:20em;
+    height: 400px;
+    margin-top: 10em;
+    margin-left: 15em;
 }
 
