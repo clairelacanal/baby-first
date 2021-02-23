@@ -14,7 +14,7 @@ class ListEtiquette extends React.Component {
         service.get('/etiquette')
         .then(responseFromApi => {
             this.setState({listOfEtiquettes: responseFromApi.data})
-            console.log("liste d'etiquettes:" + listOfEtiquettes);
+            console.log("liste d'etiquettes:" + this.state.listOfEtiquettes);
         })
         .catch(err => {
             console.log(err, "Les etiquettes ne s'affichent pas")
