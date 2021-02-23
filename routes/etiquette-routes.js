@@ -44,6 +44,7 @@ etiquetteRoutes.get('/', (req,res,next) => {
   Etiquette.find()
     .populate('author')
     .then(allTheEtiquettes => {
+      console.log('list', allTheEtiquettes)
       res.json(allTheEtiquettes);
     })
     .catch(err => {

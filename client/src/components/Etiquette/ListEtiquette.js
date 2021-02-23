@@ -22,7 +22,7 @@ class ListEtiquette extends React.Component {
 
     }
 
-    componentDiMount(){
+    componentDidMount(){
         this.getAllEtiquettes();
     }
 
