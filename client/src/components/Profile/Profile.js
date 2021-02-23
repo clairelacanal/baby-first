@@ -24,7 +24,7 @@ class Profile extends React.Component {
 
     //Function componentDiMount()
 
-    componentDiMount(){
+    componentDidMount(){
         this.getUserProfile()
     }
 

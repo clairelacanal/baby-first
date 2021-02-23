@@ -24,7 +24,7 @@ class DetailsEtiquette extends React.Component{
 
     //Function componentDiMount()
 
-    componentDiMount(){
+    componentDidMount(){
         this.getOneEtiquette()
     }
 
