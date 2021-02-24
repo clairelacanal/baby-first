@@ -24,6 +24,7 @@ class AddEtiquette extends React.Component {
         const date = this.state.date;
         const imageUrl = this.state.imageUrl;
         const commentaire = this.state.commentaire;
+       
 
         service.post('/etiquette', {title, lieu, date, imageUrl, commentaire})
         .then(() => {

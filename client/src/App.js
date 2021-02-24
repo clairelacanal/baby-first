@@ -29,7 +29,7 @@ class App extends React.Component {
     }
   }
 
-  componentDiMount(){
+  componentDidMount(){
     this.fetchUser();
   }
 
@@ -45,9 +45,9 @@ class App extends React.Component {
         <Route exact path="/" component = {Home} />
         <Route exact path="/signup" render ={() => <Signup updateUser= {this.updateLoggedInUser}/>}/>
         <Route exact path="/login"  render ={() => <Login updateUser= {this.updateLoggedInUser} user={this.state.loggedInUser}/>}/>
-        <Route exact path="/profile/:id" render={() => <Profile user={this.state.loggedInUser}/>}/>
+        <Route exact path="/profile/:id" render={(props) => <Profile {...props}/>}/>
         <Route exact path="/etiquette/ajout" render={() => <AddEtiquette user={this.state.loggedInUser}/>}/>
-        <Route exact path="/etiquette/:id" render={() => <DetailsEtiquette user={this.state.loggedInUser}/>}/>
+        <Route exact path="/etiquette/:id" render={() => <DetailsEtiquette/>}/>
         </Switch>
         <Footer/>
     </div>

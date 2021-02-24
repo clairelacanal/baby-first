@@ -38,10 +38,10 @@ etiquetteRoutes.post('/', (req, res, next) => {
 });
 
 
-/*GET afficher toutes les étiquettes */
+/*GET afficher toutes les étiquettes de l'auteur */
 
-etiquetteRoutes.get('/', (req,res,next) => {
-  Etiquette.find()
+etiquetteRoutes.get('/:id', (req,res,next) => {
+  Etiquette.findOne({ _id: id })
     .populate('author')
     .then(allTheEtiquettes => {
       console.log('list', allTheEtiquettes)
