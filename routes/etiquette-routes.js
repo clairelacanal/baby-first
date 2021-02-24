@@ -40,8 +40,9 @@ etiquetteRoutes.post('/', (req, res, next) => {
 
 /*GET afficher toutes les étiquettes de l'auteur */
 
-etiquetteRoutes.get('/:id', (req,res,next) => {
+etiquetteRoutes.get('/byAuthor/:id', (req,res,next) => {
   const id = req.params.id;
+  console.log("filter par auteur:" + id)
   Etiquette.find({ author: id })
     .populate('author')
     .then(allTheEtiquettes => {

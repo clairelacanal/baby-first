@@ -7,7 +7,7 @@ import ListEtiquette from '../Etiquette/ListEtiquette';
 
 class Profile extends React.Component {
     state = {
-        user : {},
+        user : null,
     }
 
     getUserProfile = () => {
@@ -29,20 +29,24 @@ class Profile extends React.Component {
     }
 
     render(){
-        return(
-            <div id="profile">
-                <div className="section-profile">
-                    <div className="profile-presentation">
-                        <h1>Bienvenue {this.state.user.username}</h1>
-                        <h2>Ajoutez les premières fois de votre enfant</h2>
-                        <Link to={`/etiquette/ajout`}><button className="profile-add">Ajouter une nouvelle étiquette</button></Link>
-                            <div className="show-etiquette">
-                                <ListEtiquette/>
-                            </div>
+        if (this.state.user == null) {
+            return null;
+        } else {
+            return (
+                <div id="profile">
+                    <div className="section-profile">
+                        <div className="profile-presentation">
+                            <h1>Bienvenue {this.state.user.username}</h1>
+                            <h2>Ajoutez les premières fois de votre enfant</h2>
+                            <Link to={`/etiquette/ajout`}><button className="profile-add">Ajouter une nouvelle étiquette</button></Link>
+                                <div className="show-etiquette">
+                                    <ListEtiquette user={this.state.user}/>
+                                </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        )
+            )
+        }
     }
 
 

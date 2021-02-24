@@ -11,7 +11,8 @@ class ListEtiquette extends React.Component {
     //Function getAllEtiquettes()
 
     getAllEtiquettes = () => {
-        service.get(`/etiquette/${this.props._id}`)
+        console.log("mon user :" + JSON.stringify(this.props.user))
+        service.get(`/etiquette/byAuthor/${this.props.user._id}`)
         .then(responseFromApi => {
             this.setState({listOfEtiquettes: responseFromApi.data})
             console.log("liste d'etiquettes:" + this.state.listOfEtiquettes);
