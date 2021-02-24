@@ -41,7 +41,8 @@ etiquetteRoutes.post('/', (req, res, next) => {
 /*GET afficher toutes les étiquettes de l'auteur */
 
 etiquetteRoutes.get('/:id', (req,res,next) => {
-  Etiquette.findOne({ _id: id })
+  const id = req.params.id;
+  Etiquette.find({ author: id })
     .populate('author')
     .then(allTheEtiquettes => {
       console.log('list', allTheEtiquettes)
