@@ -6,14 +6,14 @@ import './Etiquette.css';
 
 class ModifyEtiquette extends React.Component {
     state = {
-        etiquette : {}
+        etiquette : null
     }
 
     //Function ModifyOneEtiquette()
 
     ModifyOneEtiquette = () => {
-        console.log("mon etiquette :" + JSON.stringify(this.props.etiquette))
-        service.put(`/etiquette/${this.props.etiquette._id}`)
+        const {params} = this.props.match
+        service.put(`/etiquette/${params.id}`)
         .then(responseFromApi => {
             this.setState({etiquette: responseFromApi.data})
             console.log("Mon etiquette:" + this.state.etiquette);
@@ -56,7 +56,9 @@ class ModifyEtiquette extends React.Component {
                 <div className="container-modify-etiquette">
                     <div className="formulaire-modify-etiquette">
                         <form onSubmit={this.handleFormSubmit} className="formulaire-modify-etiquette">
-                          coucou
+                            <DetailsEtiquette
+                            etiquette ={this.state.etiquette} 
+                            />
                         </form>
                     </div>
                 </div>
