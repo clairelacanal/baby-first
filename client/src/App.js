@@ -10,6 +10,7 @@ import Profile from './components/Profile/Profile';
 import ListEtiquette from './components/Etiquette/ListEtiquette';
 import AddEtiquette from './components/Etiquette/AddEtiquette';
 import DetailsEtiquette from './components/Etiquette/DetailsEtiquette';
+import ModifyEtiquette from './components/Etiquette/ModifyEtiquette';
 import { loggedin } from './components/Auth/auth-service';
 
 class App extends React.Component {
@@ -48,6 +49,7 @@ class App extends React.Component {
         <Route exact path="/profile/:id" render={(props) => <Profile {...props}/>}/>
         <Route exact path="/etiquette/ajout" render={() => <AddEtiquette user={this.state.loggedInUser}/>}/>
         <Route exact path="/etiquette/:id" render= {(props) => <DetailsEtiquette {...props}/>} /> 
+        <Route exact path="/modify-etiquette/:id" render={(props) => <ModifyEtiquette {...props}/>}/>
         </Switch>
         <Footer/>
     </div>

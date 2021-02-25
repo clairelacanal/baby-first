@@ -1,30 +1,39 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import service from '../Auth/auth-service';
+import DetailsEtiquette from '../Etiquette/DetailsEtiquette';
 import './Etiquette.css';
 
 class ModifyEtiquette extends React.Component {
     state = {
-        etiquette : {
-            title: '',
-            lieu: '',
-            date: new Date(),
-            imageUrl: '',
-            commentaire: '',
-            redirect: false
-        }
+        etiquette : {}
+    }
+
+    //Function ModifyOneEtiquette()
+
+    ModifyOneEtiquette = () => {
+        console.log("mon etiquette :" + JSON.stringify(this.props.etiquette))
+        service.put(`/etiquette/${this.props.etiquette._id}`)
+        .then(responseFromApi => {
+            this.setState({etiquette: responseFromApi.data})
+            console.log("Mon etiquette:" + this.state.etiquette);
+        })
+        .catch(err => {
+            console.log(err, "L'étiquette ne s'affiche pas")
+        })
+
     }
 
     //Function handleSubmit() pour soumettre le formulaire
     handleSubmit = (event) => {
-        preventDefault(event);
-        const title = this.state.title,
-        const lieu = this.state.lieu,
-        const date = this.state.date,
-        const imageUrl = this.state.imageUrl,
+        event.preventDefault()
+        const title = this.state.title;
+        const lieu = this.state.lieu;
+        const date = this.state.date;
+        const imageUrl = this.state.imageUrl;
         const commentaire = this.state.commentaire
 
-        service.post('/etiquette', {title, lieu, date, imageUrl, commentaire})
+        service.put('/etiquette', {title, lieu, date, imageUrl, commentaire})
         .then(() => {
             this.setState({title, lieu, date, imageUrl, redirect:true});
         })
@@ -45,16 +54,9 @@ class ModifyEtiquette extends React.Component {
         return(
             <div id="section-modify-etiquette">
                 <div className="container-modify-etiquette">
-                    <div className="image-modify-etiquette">
-
-                    </div>
                     <div className="formulaire-modify-etiquette">
-                        <form className="form-modify-etiquette">
-                            <label>Titre:</label>
-                            <label>Lieu:</label>
-                            <label>Date:</label>
-                            <label>Commentaire:</label>
-                            <Link to="/profile">Validez les modifications</Link>
+                        <form onSubmit={this.handleFormSubmit} className="formulaire-modify-etiquette">
+                          coucou
                         </form>
                     </div>
                 </div>
