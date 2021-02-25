@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import service from '../Auth/auth-service';
 import './Etiquette.css';
 
@@ -33,7 +34,7 @@ class DetailsEtiquette extends React.Component{
         const {params} = this.props.match
         service.delete(`/etiquette/${params.id}`)
         .then(() => {
-            this.props.history.push(`/profile/${params.id}`); //Quand ça deletera, le user sera redirigé sur le profil 
+            this.props.history.push(`/login`); //Quand ça deletera, le user sera redirigé sur le profil 
         })
         .catch((err) => {
             console.log(`il y a une erreur dans la suppression de l'etiquette`, err);
@@ -41,8 +42,8 @@ class DetailsEtiquette extends React.Component{
     }
 
 
-
     render(){
+
         return(
             <div id="section-details-etiquette">
                 <div className="container-details-etiquette">
@@ -52,9 +53,9 @@ class DetailsEtiquette extends React.Component{
                         </div>
                         <div className="details">
                             <h1>{this.state.etiquette.title}</h1>
-                            <p><span>Lieu: {this.state.etiquette.lieu}</span></p>
-                            <p><span>Date: {this.state.etiquette.date}</span></p>
-                            <p><span>Commentaire: {this.state.etiquette.commentaire}</span></p>
+                            <p><span>Lieu: </span>{this.state.etiquette.lieu}</p>
+                            <p><span>Date: </span>{this.state.etiquette.date}</p>
+                            <p><span>Commentaire: </span>{this.state.etiquette.commentaire}</p>
                         </div>
                         <div className="differents-buttons">
                             <div className="button-modified">
