@@ -36,16 +36,16 @@ class ListEtiquette extends React.Component {
             <div id="listEtiquettes">
                 <div className="section-listEtiquettes">
                     <div className="container-listEtiquettes">
-                        <div className="etiquette">
                             {this.state.listOfEtiquettes.map(etiquette => 
+                                <div className="etiquettes">
                                 <div key={etiquette.id}>
                                 <h4>{etiquette.title}</h4>
                                 <img src={etiquette.imageUrl} alt=""/>
                                 <button><Link to={`/etiquette/${etiquette._id}`}>Voir plus</Link></button>
                                 </div>
+                                </div>
                             )}
                         </div>
-                    </div>
                 </div>
             </div>
         )

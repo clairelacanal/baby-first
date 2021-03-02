@@ -1,21 +1,25 @@
 #listEtiquettes {
     background-color: grey;
-    width: 1250px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
+    width: 1200px;
+    display: block;    
 }
 
 .container-listEtiquettes {
+    background-color: hotpink;
+    width: 1200px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-.etiquette {
-    background-color: hotpink;
+.etiquettes {
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    width: 10em;
+    height: 10em;
+    margin: 1em 2em 1em 2em;
 }
 
 
