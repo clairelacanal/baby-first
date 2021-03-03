@@ -8,6 +8,8 @@
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 2em;
+
    
 }
 
@@ -19,6 +21,11 @@
     height: 15em;
     margin: 2em;
     border-radius: 0.5em;
+}
+
+.etiquettes h4 {
+    border-bottom: 1px solid black;
+    padding: 0.5em;
 }
 
 .details-etiquette {
@@ -33,7 +40,18 @@
     margin-top: 2em;
     width: 8em;
     height: 2em;
+    background-color: #f78fb3;
+    border: 1px solid #f78fb3;
+    border-radius: 0.3em;
 }
+
+.details-etiquette button a {
+    text-decoration: none;
+    color: #c44569;
+    font-weight: 700;
+}
+
+
 
 
 
