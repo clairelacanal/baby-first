@@ -1,33 +1,39 @@
-#listEtiquettes {
-    background-color: grey;
-    width: 1200px;
-    display: block;    
-}
+
 
 .container-listEtiquettes {
-    background-color: hotpink;
-    width: 1200px;
+    width: 1300px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+   
 }
 
 .etiquettes {
     display: flex;
     flex-direction: column;
-    background-color: blue;
-    width: 10em;
-    height: 10em;
-    margin: 1em 2em 1em 2em;
+    background-color: #ecf0f1;
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    border-radius: 0.5em;
+}
+
+.details-etiquette {
+    background-color: #ffcccc;
+    margin-top: 6em;
+    height: 4.3em;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+.details-etiquette button {
+    margin-top: 2em;
+    width: 8em;
+    height: 2em;
 }
 
 
 
-.add-etiquette {
-    background-color: yellow;
-    width: 800px;
-    height: 600px;
-    margin-left: 50em;
-    margin-top:20em;
-}
