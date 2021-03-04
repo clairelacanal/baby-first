@@ -49,7 +49,7 @@ class DetailsEtiquette extends React.Component{
                 <div className="container-details-etiquette">
                     <div className="details-etiquette">
                         <div className="image">
-                            <img src={this.state.etiquette.imageUrl} alt="image de l'étiquette"/>
+                            <img src={this.state.etiquette.imageUrl} className="image-url" alt="image de l'étiquette"/>
                         </div>
                         <div className="details">
                             <h1>{this.state.etiquette.title}</h1>

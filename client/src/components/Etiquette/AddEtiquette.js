@@ -71,7 +71,7 @@ class AddEtiquette extends React.Component {
                             <input type="date" name="date" value={this.state.date} onChange={event => this.handleChange(event)}/>
 
                             <label>Télécharger une image:</label>
-                            <input type="file" name="imageUrl" value={this.state.imageUrl} onChange={event => this.handleChange(event)}/>
+                            <input type="file" onChange={this.handleUpload}/>
 
                             <label>Ajouter un commentaire:</label>
                             <textarea name="commentaire" value={this.state.commentaire} onChange={event => this.handleChange(event)}/>
