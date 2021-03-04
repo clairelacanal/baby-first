@@ -4,7 +4,7 @@ import './Footer.css';
 function Footer () {
     return(
         <div className="footer">
-            <p>Claire Lacanal & Vincent Bosc</p>
+            <p>Claire Lacanal & Vincent Bosc - © All Rights Reserved</p>
         </div>
     )
 }
