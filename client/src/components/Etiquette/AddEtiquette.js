@@ -2,7 +2,8 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import {login} from '../Auth/auth-service';
-import service, { upload } from '../Auth/auth-service';
+import service from '../Auth/auth-service';
+import {upload} from '../Auth/auth-service';
 import './Etiquette.css';
 
 class AddEtiquette extends React.Component {
@@ -71,7 +72,7 @@ class AddEtiquette extends React.Component {
                             <input type="date" name="date" value={this.state.date} onChange={event => this.handleChange(event)}/>
 
                             <label>Télécharger une image:</label>
-                            <input type="file" onChange={this.handleUpload}/>
+                            <input type="file" name="imageUrl" value={this.state.imageUrl} onChange={event => this.handleUpload(event)}/>
 
                             <label>Ajouter un commentaire:</label>
                             <textarea name="commentaire" value={this.state.commentaire} onChange={event => this.handleChange(event)}/>
