@@ -111,7 +111,7 @@ etiquetteRoutes.put('/:id', (req,res,next) => {
     })
 })
 
-/*DELETE /etiquette/:id delete une annonce */
+/*DELETE /etiquette/:id delete une etiquette */
 etiquetteRoutes.delete('/:id', (req, res, next)=>{
 
   if(!mongoose.Types.ObjectId.isValid(req.params.id)) {
@@ -127,6 +127,5 @@ etiquetteRoutes.delete('/:id', (req, res, next)=>{
       res.json(err);
     })
 })
-
 
 module.exports = etiquetteRoutes;

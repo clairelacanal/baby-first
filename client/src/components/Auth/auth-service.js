@@ -31,3 +31,8 @@ function upload(formdata) {
 }
 export {upload}
 
+function destroyImageCloudinary(imageUrl){
+  return service.delete('/delete',{data: {file: imageUrl}}).then(response => console.log('Ok image supprimée de Cloudinary'))
+}
+export{destroyImageCloudinary}
+

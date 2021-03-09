@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
+import {destroyImageCloudinary} from '../Auth/auth-service';
 import service from '../Auth/auth-service';
 import './Etiquette.css';
 
@@ -39,6 +40,11 @@ class DetailsEtiquette extends React.Component{
         .catch((err) => {
             console.log(`il y a une erreur dans la suppression de l'etiquette`, err);
         })
+        console.log("client image detruite:" + this.state.etiquette.imageUrl)
+
+        destroyImageCloudinary(this.state.etiquette.imageUrl)
+        .then(response => console.log('Ok, image supprimée de Cloudinary'))
+        .catch(err => console.log(err));
     }
 
 

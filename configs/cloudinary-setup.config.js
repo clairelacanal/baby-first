@@ -13,10 +13,15 @@ const storage = new CloudinaryStorage({
   params: {
     folder: 'baby-first',
     allowedFormats: ['jpg', 'png'],
-    public_id: (req, file) => file.originalname
-  }
+    public_id: (req, file) => file.originalname,
+  },
 });
 
+const destroyImg = cloudinary.uploader.destroy;
 const uploadCloud = multer({ storage });
 
-module.exports = uploadCloud;
+
+module.exports = {
+  uploader: uploadCloud,
+  destroy: destroyImg,
+};
