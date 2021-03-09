@@ -2,7 +2,7 @@
     background-image: linear-gradient(rgba(255,255,255, 0.4), rgba(255,255,255, 0.4)),
     url('../images/background-image.jpg');
     background-size: cover;
-    height: 97vh;
+    
 }
 
 .profile-presentation {
@@ -19,5 +19,8 @@
     color: #ffff;
     font-weight: 700;
 }
+
+
+
 
 

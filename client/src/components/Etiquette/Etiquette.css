@@ -1,16 +1,18 @@
-
+.section-listEtiquettes {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 .container-listEtiquettes {
     width: 1300px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     margin-right: auto;
     margin-left: auto;
     margin-top: 2em;
-
-   
 }
 
 .etiquettes {
