@@ -38,6 +38,16 @@
     border-bottom-right-radius: 0.5em;
 }
 
+.detail-etiquette-page {
+    background-color: greenyellow;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .details-etiquette button {
     margin-top: 2em;
     width: 8em;

@@ -53,7 +53,7 @@ class DetailsEtiquette extends React.Component{
         return(
             <div id="section-details-etiquette">
                 <div className="container-details-etiquette">
-                    <div className="details-etiquette">
+                    <div className="detail-etiquette-page">
                         <div className="image">
                             <img src={this.state.etiquette.imageUrl} className="image-url" alt="image de l'étiquette"/>
                         </div>
@@ -62,14 +62,15 @@ class DetailsEtiquette extends React.Component{
                             <p><span>Lieu: </span>{this.state.etiquette.lieu}</p>
                             <p><span>Date: </span>{this.state.etiquette.date}</p>
                             <p><span>Commentaire: </span>{this.state.etiquette.commentaire}</p>
-                        </div>
-                        <div className="differents-buttons">
+                            
+                            <div className="differents-buttons">
                             <div className="button-modified">
                                 <Link to={`/modify-etiquette/${this.state.etiquette._id}`}>Modifier</Link>
                             </div>
                             <div className="button-delete">
                                 <p className="deleteButton" onClick={() => this.deleteEtiquette()}>Supprimer</p>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
