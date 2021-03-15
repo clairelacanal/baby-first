@@ -19,15 +19,15 @@
 .etiquettes {
     display: flex;
     flex-direction: column;
-    background-color: #ecf0f1;
+    background-color: #ffcccc;
     width: 15em;
-    height: 15em;
+    height: 16em;
     margin: 2em;
     border-radius: 0.5em;
 }
 
 .etiquettes h4 {
-    border-bottom: 1px solid #bdc3c7;
+    border-bottom: 1px solid #ffcccc;
     padding: 0.5em;
     margin-bottom: 0px;
 }
