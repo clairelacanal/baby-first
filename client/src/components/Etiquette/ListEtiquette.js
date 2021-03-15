@@ -32,22 +32,23 @@ class ListEtiquette extends React.Component {
         if(this.state.listOfEtiquettes.length === 0 ) {
             return annoncePhrase;       
         }
+
         return(
             <div id="listEtiquettes">
                 <div className="section-listEtiquettes">
                     <div className="container-listEtiquettes">
                             {this.state.listOfEtiquettes.map(etiquette => 
-                                <div className="etiquettes">
-                                    <div key={etiquette.id}>
-                                    <h4>{etiquette.title}</h4>
-                                    <img src={etiquette.imageUrl} alt=""/>
-                                <div className="details-etiquette">
-                                    <button><Link to={`/etiquette/${etiquette._id}`}>Voir plus</Link></button>
-                                </div>
+                                    <div className="etiquettes">
+                                        <div key={etiquette.id}>
+                                        <h4>{etiquette.title}</h4>
+                                        <img className="image-list" src={etiquette.imageUrl} alt=""/>
+                                            <div className="details-etiquette">
+                                                <button><Link to={`/etiquette/${etiquette._id}`}>Voir plus</Link></button>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
                             )}
-                        </div>
+                    </div>
                 </div>
             </div>
         )

@@ -59,18 +59,18 @@ class DetailsEtiquette extends React.Component{
                         </div>
                         <div className="details">
                             <h1>{this.state.etiquette.title}</h1>
-                            <p><span>Lieu: </span>{this.state.etiquette.lieu}</p>
-                            <p><span>Date: </span>{this.state.etiquette.date}</p>
-                            <p><span>Commentaire: </span>{this.state.etiquette.commentaire}</p>
+                            <p><span>Lieu : </span>{this.state.etiquette.lieu}</p>
+                            <p><span>Date : </span>{this.state.etiquette.date}</p>
+                            <p><span>Commentaire : </span>{this.state.etiquette.commentaire}</p>
                             
                             <div className="differents-buttons">
-                            <div className="button-modified">
-                                <Link to={`/modify-etiquette/${this.state.etiquette._id}`}>Modifier</Link>
+                                <div className="button-modified">
+                                    <button><Link to={`/modify-etiquette/${this.state.etiquette._id}`}>Modifier</Link></button>
+                                </div>
+                                <div className="button-delete">
+                                    <button className="deleted" onClick={() => this.deleteEtiquette()}>Supprimer</button> 
+                                </div>
                             </div>
-                            <div className="button-delete">
-                                <p className="deleteButton" onClick={() => this.deleteEtiquette()}>Supprimer</p>
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </div>

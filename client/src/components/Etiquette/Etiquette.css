@@ -15,6 +15,7 @@
     margin-top: 2em;
 }
 
+
 .etiquettes {
     display: flex;
     flex-direction: column;
@@ -28,18 +29,50 @@
 .etiquettes h4 {
     border-bottom: 1px solid #bdc3c7;
     padding: 0.5em;
+    margin-bottom: 0px;
 }
 
 .details-etiquette {
     background-color: #ffcccc;
-    margin-top: 6em;
-    height: 4.3em;
+    height: 3em;
+    margin: 0;
     border-bottom-left-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
 }
 
+.image-list {
+    width: 15em;
+    height: 12em;
+}
+
+.image {
+    border: 8px double #f78fb3;
+    width: 400px;
+    height: 400px;
+    margin-left: 15em;
+}
+
+span {
+    color:  #2d3436;
+    font-weight: 700;
+}
+
+.details {
+    margin-right: 20em;
+}
+
+.details h1 {
+    margin-bottom: 2em;
+    color: #2d3436;
+}
+
+.details p {
+    line-height: 3.5em;
+}
+
 .detail-etiquette-page {
-    background-color: greenyellow;
+    background-color: #ecf0f1;
+    background-size: cover;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -48,8 +81,45 @@
     justify-content: space-evenly;
 }
 
-.details-etiquette button {
+.differents-buttons {
+    width: 15em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.button-modified button {
     margin-top: 2em;
+    width: 8em;
+    height: 2.5em;
+    background-color: #f78fb3;
+    border: 1px solid #f78fb3;
+    border-radius: 0.3em;
+}
+
+.button-modified button a {
+    text-decoration: none;
+    color: #c44569;
+    font-weight: 700;
+}
+
+.button-delete button {
+    margin-top: 2em;
+    width: 8em;
+    height: 2.5em;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 0.3em;
+    color: yellow;
+    font-weight: 700;
+}
+
+
+
+.details-etiquette button {
+    margin-top: 1em;
     width: 8em;
     height: 2em;
     background-color: #f78fb3;
