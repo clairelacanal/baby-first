@@ -2,6 +2,7 @@ import React from 'react';
 import './Etiquette.css';
 import {Link} from 'react-router-dom';
 import service from '../Auth/auth-service';
+import defaultImg from '../images/game.jpeg';
 
 class ListEtiquette extends React.Component {
     state = {
@@ -41,7 +42,7 @@ class ListEtiquette extends React.Component {
                                     <div className="etiquettes">
                                         <div key={etiquette.id}>
                                         <h4>{etiquette.title}</h4>
-                                        <img className="image-list" src={etiquette.imageUrl} alt=""/>
+                                        <img className="image-list" alt="" src={etiquette.imageUrl || defaultImg}/>
                                             <div className="details-etiquette">
                                                 <button><Link to={`/etiquette/${etiquette._id}`}>Voir plus</Link></button>
                                             </div>

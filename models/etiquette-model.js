@@ -10,7 +10,7 @@ const etiquetteSchema = new Schema({
   },
   imageUrl: {
     type: String,
-    default : 'https://www.stocklib.fr/media-85622929/default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors.html?keyword=avatar'
+    default : 'https://unsplash.com/photos/GQ327RPuxhI'
   },
   commentaire: String,
   author: { type : Schema.Types.ObjectId, ref: 'User' },
