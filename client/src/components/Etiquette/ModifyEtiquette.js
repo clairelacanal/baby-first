@@ -28,7 +28,7 @@ class ModifyEtiquette extends React.Component {
     }
     //Function ModifyOneEtiquette()
 
-    ModifyOneEtiquette = () => {
+    modifyOneEtiquette = () => {
         const {params} = this.props.match
         service.put(`/etiquette/${params.id}`)
         .then(responseFromApi => {

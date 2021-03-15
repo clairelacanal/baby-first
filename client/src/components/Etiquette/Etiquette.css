@@ -52,6 +52,11 @@
     margin-left: 15em;
 }
 
+.image img {
+    width: 400px;
+    height: 400px;
+}
+
 span {
     color:  #2d3436;
     font-weight: 700;
