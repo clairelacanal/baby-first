@@ -6,7 +6,7 @@
     "start": "node ./bin/www",
     "dev": "DEBUG=baby-first:* nodemon ./bin/www",
     "dev-windows": "nodemon ./bin/www",
-    "test": "mocha modifyEtiquette.test.js; mocha addEtiquette.test.js"
+    "test": "mocha etiquette.test.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
