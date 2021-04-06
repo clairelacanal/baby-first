@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import {destroyImageCloudinary} from '../Auth/auth-service';
 import service from '../Auth/auth-service';
+import defaultImg from '../images/game.jpeg';
 import './Etiquette.css';
 
 class DetailsEtiquette extends React.Component{
@@ -55,7 +56,7 @@ class DetailsEtiquette extends React.Component{
                 <div className="container-details-etiquette">
                     <div className="detail-etiquette-page">
                         <div className="image">
-                            <img src={this.state.etiquette.imageUrl} className="image-url" alt="image de l'étiquette"/>
+                            <img src={this.state.etiquette.imageUrl || defaultImg} className="image-url" alt="image de l'étiquette"/>
                         </div>
                         <div className="details">
                             <h1>{this.state.etiquette.title}</h1>
