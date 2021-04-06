@@ -8,7 +8,8 @@ import './Etiquette.css';
 
 class DetailsEtiquette extends React.Component{
     state = {
-        etiquette : {}
+        etiquette : {},
+        dateEtiquette : ""
     }
 
     //Function get0neEtiquette
@@ -25,10 +26,17 @@ class DetailsEtiquette extends React.Component{
         })
     }
 
+    getDate = () => {
+        let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        let dateShow = new Date().toLocaleDateString('fr-CA', options);
+        this.setState({ dateEtiquette : dateShow });
+      };
+
     //Function componentDiMount()
 
     componentDidMount(){
         this.getOneEtiquette()
+        this.getDate()
     }
 
     //Function deleteEtiquette()
@@ -61,7 +69,7 @@ class DetailsEtiquette extends React.Component{
                         <div className="details">
                             <h1>{this.state.etiquette.title}</h1>
                             <p><span>Lieu : </span>{this.state.etiquette.lieu}</p>
-                            <p><span>Date : </span>{this.state.etiquette.date}</p>
+                            <p><span>Date : </span>{this.state.dateEtiquette}</p>
                             <p><span>Commentaire : </span>{this.state.etiquette.commentaire}</p>
                             
                             <div className="differents-buttons">
