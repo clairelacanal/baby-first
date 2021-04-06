@@ -20,7 +20,6 @@ etiquetteRoutes.post('/', (req, res, next) => {
     }
     const {title,lieu,date,imageUrl,commentaire} = req.body;
     
-
     Etiquette.create({
       title,
       lieu,
