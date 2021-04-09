@@ -48,8 +48,9 @@ class App extends React.Component {
         <Route exact path="/login"  render ={() => <Login updateUser= {this.updateLoggedInUser} user={this.state.loggedInUser}/>}/>
         <Route exact path="/profile/:id" render={(props) => <Profile {...props}/>}/>
         <Route exact path="/etiquette/ajout" render={() => <AddEtiquette user={this.state.loggedInUser}/>}/>
-        <Route exact path="/etiquette/:id" render= {(props) => <DetailsEtiquette {...props}/>} /> 
-        <Route exact path="/modify-etiquette/:id" render={(props) => <ModifyEtiquette {...props}/>}/>
+        <Route exact path="/etiquette/:id" render= {(props) => <DetailsEtiquette {...props} user={this.state.loggedInUser}/>} /> 
+        <Route exact path="/etiquette/:id" render= {(props) => <DetailsEtiquette {...props} user={this.state.loggedInUser}/>} /> 
+        <Route exact path="/modify-etiquette/:id" render={(props) => <ModifyEtiquette {...props} user={this.state.loggedInUser}/>}/>
         </Switch>
         <Footer/>
     </div>

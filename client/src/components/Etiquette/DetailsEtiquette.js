@@ -4,14 +4,14 @@ import { Redirect } from 'react-router-dom';
 import {destroyImageCloudinary} from '../Auth/auth-service';
 import service from '../Auth/auth-service';
 import defaultImg from '../images/game.jpeg';
-import Moment from 'react-moment';
 import './Etiquette.css';
 
 
 
 class DetailsEtiquette extends React.Component{
     state = {
-        etiquette : {}
+        etiquette : {},
+        formattedDate : ""
     }
 
     //Function get0neEtiquette
@@ -21,17 +21,28 @@ class DetailsEtiquette extends React.Component{
         service.get(`/etiquette/${params.id}`)
         .then(responseFromApi => {
             const theEtiquette = responseFromApi.data;
-            this.setState({etiquette: theEtiquette})
-        })
+            this.setState({etiquette: theEtiquette});
+            let date = new Date(this.state.etiquette.date)
+            let dateAsString = date.toLocaleString('fr-FR',{
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: 'numeric',
+                    minute: 'numeric'
+                });
+            this.setState({formattedDate: dateAsString});
+            })
         .catch((err) => {
             console.log('erreur pour charger', err)
         })
     }
 
+
     //Function componentDiMount()
 
     componentDidMount(){
-        this.getOneEtiquette()
+        this.getOneEtiquette();
     }
 
     //Function deleteEtiquette()
@@ -64,7 +75,7 @@ class DetailsEtiquette extends React.Component{
                         <div className="details">
                             <h1>{this.state.etiquette.title}</h1>
                             <p><span>Lieu : </span>{this.state.etiquette.lieu}</p>
-                            <p><span>Date : </span>{this.state.etiquette.date}</p>
+                            <p><span>Date : </span>{this.state.formattedDate}</p>
                             <p><span>Commentaire : </span>{this.state.etiquette.commentaire}</p>
                             
                             <div className="differents-buttons">

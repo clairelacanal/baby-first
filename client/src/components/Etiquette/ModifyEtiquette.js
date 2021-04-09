@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import service from '../Auth/auth-service';
+import {upload} from '../Auth/auth-service';
 import './Etiquette.css';
 
 class ModifyEtiquette extends React.Component {
@@ -15,6 +16,7 @@ class ModifyEtiquette extends React.Component {
         service.get(`/etiquette/${params.id}`)
         .then(responseFromApi => {
             const theEtiquette = responseFromApi.data;
+            console.log('Etiquette trouvee',theEtiquette)
             this.setState({etiquette: theEtiquette})
         })
         .catch((err) => {
@@ -68,6 +70,16 @@ class ModifyEtiquette extends React.Component {
         this.setState({etiquette : newEtiquette})
     }
 
+    //Function handleUpload()
+    handleUpload = (event) => {
+        let formData = new FormData();
+        formData.append('imageUrl', event.target.files[0]);
+
+        upload(formData)
+            .then(response => this.setState({imageUrl: response.secure_url}))
+            .catch(err => console.log(`l'image ne se charge pas`, err))
+    }
+
     render(){
         if (this.state.etiquette == null) {
             return null;
@@ -88,7 +100,7 @@ class ModifyEtiquette extends React.Component {
                             <input type="date" name="date" value={this.state.etiquette.date} onChange={element => this.handleChange(element)}/>
 
                             <label>Changez l'image:</label>
-                            <input type="file" name="imageUrl" value={this.state.etiquette.imageUrl} onChange={element => this.handleChange(element)}/>
+                            <input type="file" name="imageUrl"  onChange={event => this.handleUpload(event)}/>
 
                             <label>Changez le commentaire:</label>
                             <textarea name="commentaire" value={this.state.etiquette.commentaire} onChange={element => this.handleChange(element)}/>

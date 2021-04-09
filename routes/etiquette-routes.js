@@ -103,7 +103,7 @@ etiquetteRoutes.put('/:id', (req,res,next) => {
   Etiquette.findByIdAndUpdate(id,req.body)
     .populate('author')
     .then (etiquette => {
-      res.json({ message: `Votre etiquette ${req.params.id} a été modifié` })
+      res.json({ message: `Votre etiquette ${req.params.id} a été modifiée` })
     })
     .catch(err => {
       res.json(err);
