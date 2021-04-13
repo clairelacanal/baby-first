@@ -58,12 +58,12 @@ class Login extends React.Component {
                     <Link to={"/signup"}> Créez un compte gratuitement</Link>
                     </p>
                     </div>
-                    <div className="container-images">
-                        <div className="images-container">
-                            <div className="image-one"></div>
-                            <div className="image-two"></div>
+                    <div className="container-images-login">
+                        <div className="images-container-login">
+                            <div className="image-one-login"></div>
+                            <div className="image-two-login"></div>
                         </div>
-                        <div className="container-titre">
+                        <div className="container-titre-login">
                             <h2><cite>"L'essence de l'indépendance est de pouvoir faire quelque chose pour soi-même."</cite>&nbsp;&nbsp;<strong>Maria Montessori</strong></h2>
                         </div>
                     </div>
