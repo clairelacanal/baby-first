@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import service from '../Auth/auth-service';
 import {upload} from '../Auth/auth-service';
@@ -28,31 +29,18 @@ class ModifyEtiquette extends React.Component {
     componentDidMount(){
         this.getOneEtiquette()
     }
-    //Function ModifyOneEtiquette()
-
-    modifyOneEtiquette = () => {
-        const {params} = this.props.match
-        service.put(`/etiquette/${params.id}`)
-        .then(responseFromApi => {
-            this.setState({etiquette: responseFromApi.data})
-            console.log("Mon etiquette:" + this.state.etiquette);
-        })
-        .catch(err => {
-            console.log(err, "L'étiquette ne s'affiche pas")
-        })
-
-    }
 
     //Function handleSubmit() pour soumettre le formulaire
     handleSubmit = (event) => {
         event.preventDefault()
+        const id = this.state.etiquette._id;
         const title = this.state.etiquette.title;
         const lieu = this.state.etiquette.lieu;
         const date = this.state.etiquette.date;
         const imageUrl = this.state.etiquette.imageUrl;
         const commentaire = this.state.etiquette.commentaire
 
-        service.put('/etiquette', {title, lieu, date, imageUrl, commentaire})
+        service.put(`/etiquette/${id}`, {title, lieu, date, imageUrl, commentaire})
         .then(() => {
             this.setState({title, lieu, date, imageUrl, redirect:true});
         })
@@ -81,16 +69,20 @@ class ModifyEtiquette extends React.Component {
     }
 
     render(){
+        
         if (this.state.etiquette == null) {
             return null;
         } else {
-
+            const {redirect} = this.state;
+            if(redirect){
+            return <Redirect to={`/profile/${this.props.user._id}`}></Redirect> 
+        }
         return(
             <div id="section-modify-etiquette">
                 <div className="container-modify-etiquette">
                     <div className="formulaire-modify-etiquette">
-                        <form onSubmit={this.handleFormSubmit} className="formulaire-modify-etiquette">
-                        <label>Changez le titre:</label>
+                        <form onSubmit={this.handleSubmit} className="formulaire-modify-etiquette">
+                            <label>Changez le titre:</label>
                             <input type="text" name="title" value={this.state.etiquette.title} onChange={element => this.handleChange(element)}/>
 
                             <label>Changez le lieu:</label>
@@ -105,7 +97,7 @@ class ModifyEtiquette extends React.Component {
                             <label>Changez le commentaire:</label>
                             <textarea name="commentaire" value={this.state.etiquette.commentaire} onChange={element => this.handleChange(element)}/>
 
-                            <button>Mettre à jour les modifications</button>
+                            <button className="modified">Mettre à jour les modifications</button>
                         </form>
                     </div>
                 </div>
