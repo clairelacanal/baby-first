@@ -64,7 +64,7 @@ class Login extends React.Component {
                             <div className="image-two"></div>
                         </div>
                         <div className="container-titre">
-                            <h2>"L'essence de l'indépendance est de pouvoir faire quelque chose pour soi-même."</h2>
+                            <h2><cite>"L'essence de l'indépendance est de pouvoir faire quelque chose pour soi-même."</cite>&nbsp;&nbsp;<strong>Maria Montessori</strong></h2>
                         </div>
                     </div>
                 </div>
