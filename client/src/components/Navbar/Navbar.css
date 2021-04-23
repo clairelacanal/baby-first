@@ -1,8 +1,9 @@
+
 .section-navbar {
     background-color: #eff8ff;
-    position: absolute;
     width: 100%;
     height: 5em;
+    position: fixed;
     top: 0;
 }
 
@@ -11,7 +12,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 70em; 
+    width: 70em;
+    padding: 0;
+    margin-left: 3em;
 }
 
 .section-navbar ul li {
@@ -63,4 +66,19 @@
     font-size: 35px;
 }
 
+@media screen and (max-width: 480px) {
+    .section-navbar ul {
+        width: 18em;
+        margin-left: 1em;
+    }
+
+    .button-login {
+        width: 7em;
+        height: 2.5em;
+    }
+
+    .bottle {
+        font-size: 2em;
+    }
+}
 
