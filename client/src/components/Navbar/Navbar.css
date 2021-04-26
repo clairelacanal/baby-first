@@ -20,6 +20,7 @@
 .section-navbar ul li {
     list-style: none;
     text-align: center;
+    font-size: 15px;
 }
 
 .section-navbar ul li a {
@@ -69,6 +70,7 @@
 @media screen and (max-width: 480px) {
     .section-navbar ul {
         width: 18em;
+        height: 3em;
         margin-left: 1em;
     }
 

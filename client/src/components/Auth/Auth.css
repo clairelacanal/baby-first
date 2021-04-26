@@ -98,16 +98,59 @@ form {
     margin-left: 8em;
     font-size: 16px;
     text-align: center;
-    width: 18em;
-}
-
-.container-titre-signup h2 {
-    font-weight: unset;
-    margin-left: 8em;
-    font-size: 16px;
-    text-align: center;
     width: 25em;
 }
+
+@media screen and (max-width: 480px) {
+    .section-signup {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;   
+    }
+
+    .form-signup {
+        background-color: red;
+        width: 15em;
+        display: block;
+        margin-left: 1.5em;
+    }
+
+    .form-signup input {
+        width: 15em;
+    }
+
+    .button-signup {
+        width: 18em;
+    }
+
+    .form-signup p {
+        font-size: 12px;
+    }
+
+    .images-container-signup {
+        margin-bottom: 1em;
+       
+    }
+
+    .image-one-signup {
+        width: 100px;
+        height: 100px;
+        margin-top: 7em;  
+    }
+
+    .image-two-signup {
+        width: 100px;
+        height: 100px;
+        margin-top: 7em;
+    }
+
+    .container-titre-signup h2 {
+        margin-left: 0em;
+        font-size: 13px;
+    }
+
+  }
 
 
 
