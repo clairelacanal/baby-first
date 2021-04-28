@@ -45,7 +45,7 @@ class Login extends React.Component {
                 <div className="section-login">
                     <div className="form-login">
                         <h1>Connectez-vous à vore compte</h1>
-                        <form onSubmit={this.handleFormSubmit} className="form-login">
+                        <form onSubmit={this.handleFormSubmit} className="formulaire-login">
                             <label>Email</label>
                             <input type="email" name="email" value={this.state.email} onChange={event => this.handleChange(event)}/>
 

@@ -180,6 +180,12 @@ form {
     height: 100vh;
 }
 
+.form-login {
+    background-color: #f5f6fa;
+    padding: 1em;
+    border-radius: 0.3em;
+}
+
 .images-container-login {
     display: flex;
     flex-direction: row;
@@ -225,12 +231,6 @@ form {
     width: 18em;
 }
 
-.form-login {
-    background-color: #f5f6fa;
-    width: 30em;
-    border-radius: 0.2em;
-}
-
 .form-login p {
     text-align: center;
 }
@@ -262,5 +262,74 @@ form {
     background-color: #00a8ff;
     border: 1px solid #00a8ff;
 }
+
+@media screen and (max-width: 480px) {
+    .section-login {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 5em;
+    }
+
+    .form-login {
+        width: 15em;
+        margin-left: 1.5em;
+        margin-top: 2em;
+        order: 2;
+    }
+
+    .formulaire-login {
+        height: 15em;
+    }
+
+    .form-login h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .form-login label {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .form-login input {
+        width: 15em;
+    }
+
+    .login-button {
+        width: 18em;
+    }
+
+    .form-login p {
+        font-size: 12px;
+    }
+
+    .images-container-login {
+        margin-bottom: 1em;
+        order: 1;
+       
+    }
+
+    .image-one-login{
+        width: 100px;
+        height: 100px;
+        margin-top: 3em;
+        margin-left: 2em;
+    }
+
+    .image-two-login {
+        width: 100px;
+        height: 100px;
+        margin-top: 3em;
+        margin-right: 5em;
+    }
+
+    .container-titre-login h2 {
+        margin-left: 3em;
+        font-size: 13px;
+    }
+
+  }
 
 

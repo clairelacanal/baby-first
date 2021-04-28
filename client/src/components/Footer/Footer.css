@@ -18,8 +18,8 @@
     .footer {
         align-items: center;
         justify-content: space-between;
-        bottom: 0;
         font-size: 12px;
+        margin-bottom: 0;
     }
 
 }
