@@ -4,6 +4,7 @@ import {signup} from './auth-service';
 import { Link, Redirect } from 'react-router-dom';
 
 
+
 class Signup extends React.Component {
     state = {
         username:"",
@@ -84,6 +85,7 @@ class Signup extends React.Component {
                     </div>
                 </div>
             </div>
+            
         )
     }
 }

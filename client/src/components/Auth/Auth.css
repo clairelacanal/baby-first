@@ -1,3 +1,8 @@
+
+#signup {
+    min-height: 10em;
+    background-color: blueviolet;
+}
 .section-signup {
     display: flex;
     flex-direction: row;
@@ -6,7 +11,7 @@
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .form-signup {
@@ -102,18 +107,20 @@ form {
 }
 
 @media screen and (max-width: 480px) {
+    #signup {
+        min-height: 10em;
+        background-color: blueviolet;
+    }
     .section-signup {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: flex-start;   
+        justify-content: flex-start;
     }
 
     .form-signup {
         width: 15em;
-        display: block;
         margin-left: 1.3em;
-        margin-bottom: 7em;
     }
 
     .form-signup h1 {
@@ -138,8 +145,7 @@ form {
     }
 
     .images-container-signup {
-        margin-bottom: 1em;
-       
+        margin-bottom: 1em; 
     }
 
     .image-one-signup {
@@ -159,6 +165,7 @@ form {
     .container-titre-signup h2 {
         margin-left: 0em;
         font-size: 13px;
+        margin-bottom: 0;
     }
 
   }
@@ -270,6 +277,7 @@ form {
         align-items: flex-start;
         justify-content: flex-start;
         margin-top: 5em;
+        background-color: yellow;
     }
 
     .form-login {
@@ -277,6 +285,7 @@ form {
         margin-left: 1.5em;
         margin-top: 2em;
         order: 2;
+        background-color: red;
     }
 
     .formulaire-login {
@@ -310,6 +319,7 @@ form {
         order: 1;
        
     }
+
 
     .image-one-login{
         width: 100px;

@@ -12,14 +12,12 @@
 }
 
 
-
-
 @media screen and (max-width: 480px) {
     .footer {
         align-items: center;
         justify-content: space-between;
         font-size: 12px;
-        margin-bottom: 0;
+        position: fixed;
     }
 
 }
