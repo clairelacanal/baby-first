@@ -1,9 +1,5 @@
 #profile {
-    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-                linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-                linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
-    
-    
+   background-color: #ecf0f1;
 }
 
 .profile-presentation {
@@ -19,6 +15,28 @@
     border-radius: 0.3em;
     color: #ffff;
     font-weight: 700;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 480px) {
+    .profile-presentation {
+        padding: 1em;
+        margin-top: 5em;
+    }
+
+    .profile-presentation h1 {
+        font-size: 22px;
+    }
+
+    .profile-presentation h2 {
+        font-size: 14px;
+    }
+
+    .profile-add {
+        width: 15em;
+        font-size: 11px;
+    }
+
 }
 
 
