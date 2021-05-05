@@ -33,7 +33,7 @@ const Navbar = (props) => {
                                 <button onClick = {(e) => {
                                     logout()
                                     .then(() => props.updateUser(null))
-                                }}>Logout</button>
+                                }}>Me déconnecter</button>
                                 </Link>
                             </div>
                         </div>

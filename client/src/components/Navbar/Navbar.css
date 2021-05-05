@@ -82,5 +82,14 @@
     .bottle {
         font-size: 2em;
     }
+
+    .profile-logout button {
+        width: 7em;
+        height: 2.5em;
+    }
+
+    .personn-connected {
+        font-size: 2em;
+    }
 }
 
