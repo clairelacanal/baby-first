@@ -37,10 +37,6 @@ form {
     text-align: center;
 }
 
-.form-signup input {
-    padding-left: 0.5em;
-}
-
 .form-signup a {
     text-decoration: none;
     color: #00a8ff;
@@ -50,6 +46,7 @@ form {
     width: 30em;
     height: 2em;
     border-radius: 0.3em;
+    padding-left: 0.5em;
 }
 
 .button-signup {
@@ -114,13 +111,16 @@ form {
     .section-signup {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         justify-content: flex-start;
+        width: 20px;
+        margin-bottom: 5em;
     }
 
     .form-signup {
         width: 15em;
-        margin-left: 1.3em;
+        margin-right: 1.5em;
+        margin-left: 1.5em;
     }
 
     .form-signup h1 {
@@ -152,7 +152,7 @@ form {
         width: 100px;
         height: 100px;
         margin-top: 7em;
-        margin-left: 2em;  
+        margin-left: 5em;  
     }
 
     .image-two-signup {
@@ -163,7 +163,7 @@ form {
     }
 
     .container-titre-signup h2 {
-        margin-left: 0em;
+        margin-left: 3em;
         font-size: 13px;
         margin-bottom: 0;
     }
