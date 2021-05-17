@@ -151,7 +151,7 @@ span {
     margin-top: 10em;
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 576px) {
     
     .container-listEtiquettes {
         display: flex;
