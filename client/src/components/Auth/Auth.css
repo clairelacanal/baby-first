@@ -118,8 +118,9 @@ form {
 
     .form-signup {
         width: 15em;
-        margin-right: 1.5em;
-        margin-left: 1.5em;
+        margin-right: 0em;
+        margin-left: 0em;
+        padding: 0;
     }
 
     .form-signup h1 {

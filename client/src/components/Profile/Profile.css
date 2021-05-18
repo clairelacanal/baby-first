@@ -18,7 +18,7 @@
     text-transform: uppercase;
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 576px) {
     .profile-presentation {
         padding: 1em;
         margin-top: 5em;

@@ -67,7 +67,7 @@
     font-size: 35px;
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 576px) {
     .section-navbar ul {
         width: 18em;
         height: 3em;
@@ -75,7 +75,7 @@
     }
 
     .button-login {
-        width: 7em;
+        width: 6em;
         height: 2.5em;
     }
 
