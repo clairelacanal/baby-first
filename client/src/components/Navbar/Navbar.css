@@ -77,6 +77,7 @@
     .button-login {
         width: 6em;
         height: 2.5em;
+        margin-right: 1em;
     }
 
     .bottle {
@@ -86,6 +87,7 @@
     .profile-logout button {
         width: 7em;
         height: 2.5em;
+        margin-right: 1e;
     }
 
     .personn-connected {
